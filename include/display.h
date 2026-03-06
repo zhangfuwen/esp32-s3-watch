@@ -10,10 +10,11 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include "esp_err.h"
 
-// Display dimensions (update based on actual hardware)
-#define DISPLAY_WIDTH   240
-#define DISPLAY_HEIGHT  240
+// Display dimensions are defined in board_config.h
+// Include board_config.h for actual pin definitions and display parameters
+#include "board_config.h"
 
 /**
  * @brief Initialize display hardware

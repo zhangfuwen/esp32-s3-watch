@@ -1,0 +1,10 @@
+/home/admin/Code/esp32-s3-watch/main/watch_face.c: In function 'draw_analog_clock':
+/home/admin/Code/esp32-s3-watch/main/watch_face.c:48:11: warning: unused variable 'sec_angle' [-Wunused-variable]
+   48 |     float sec_angle = timeinfo->tm_sec * 6;
+      |           ^~~~~~~~~
+/home/admin/Code/esp32-s3-watch/main/watch_face.c:47:11: warning: unused variable 'min_angle' [-Wunused-variable]
+   47 |     float min_angle = timeinfo->tm_min * 6;
+      |           ^~~~~~~~~
+/home/admin/Code/esp32-s3-watch/main/watch_face.c:46:11: warning: unused variable 'hour_angle' [-Wunused-variable]
+   46 |     float hour_angle = (timeinfo->tm_hour % 12) * 30 + timeinfo->tm_min * 0.5;
+      |           ^~~~~~~~~~
