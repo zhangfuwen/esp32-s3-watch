@@ -12,10 +12,9 @@
 #include <stdbool.h>
 #include "esp_err.h"
 
-// Button identifiers
-#define BUTTON_A    0
-#define BUTTON_B    1
-#define BUTTON_C    2
+// Button identifiers (espwatch-s3b2)
+#define BUTTON_BOOT     0       // BOOT button (GPIO 0)
+#define BUTTON_POWER    1       // POWER button (GPIO 45)
 
 // Input event callback type
 typedef void (*input_callback_t)(int button_id, void *user_data);
