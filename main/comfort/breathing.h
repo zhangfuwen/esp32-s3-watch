@@ -53,6 +53,7 @@ typedef struct {
     uint32_t phase_start_ms;      // When current phase started
     uint32_t phase_duration_ms;   // Duration of current phase
     uint8_t current_cycle;        // Current cycle number
+    uint8_t cycles_completed;     // Number of completed cycles
     float animation_progress;     // 0.0 to 1.0 for animation
 } breathing_state_t;
 
