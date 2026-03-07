@@ -23,6 +23,12 @@ static const char *TAG = "DISPLAY";
 // Display buffer (RGB565 format)
 static uint16_t display_buffer[DISPLAY_WIDTH * DISPLAY_HEIGHT];
 
+// Forward declarations for static functions
+static void st7789_write_cmd(uint8_t cmd);
+static void st7789_write_data(const uint8_t *data, int len);
+static void st7789_init(void);
+static void display_gpio_init(void);
+
 // SPI handle
 static spi_device_handle_t spi_handle;
 
@@ -51,7 +57,7 @@ static esp_err_t i2c_master_init(void)
  */
 static void display_gpio_init(void)
 {
-    // Configure DC pin
+    // Configure DC pin (command/data select)
     gpio_reset_pin(DISPLAY_DC_PIN);
     gpio_set_direction(DISPLAY_DC_PIN, GPIO_MODE_OUTPUT);
     gpio_set_level(DISPLAY_DC_PIN, 0);
@@ -61,12 +67,9 @@ static void display_gpio_init(void)
     gpio_set_direction(DISPLAY_BACKLIGHT_PIN, GPIO_MODE_OUTPUT);
     gpio_set_level(DISPLAY_BACKLIGHT_PIN, 0);
     
-    // Configure CS pin
-    gpio_reset_pin(DISPLAY_CS_PIN);
-    gpio_set_direction(DISPLAY_CS_PIN, GPIO_MODE_OUTPUT);
-    gpio_set_level(DISPLAY_CS_PIN, 1);
+    // NOTE: CS pin is managed by SPI driver, don't configure it manually
     
-    ESP_LOGI(TAG, "Display GPIO initialized");
+    ESP_LOGI(TAG, "Display GPIO initialized (DC=%d, BL=%d)", DISPLAY_DC_PIN, DISPLAY_BACKLIGHT_PIN);
 }
 
 /**
@@ -103,47 +106,63 @@ static void st7789_init(void)
 {
     ESP_LOGI(TAG, "Initializing ST7789 display controller...");
     
-    // Hardware reset (toggle CS since no RST pin)
-    gpio_set_level(DISPLAY_CS_PIN, 0);
-    vTaskDelay(pdMS_TO_TICKS(10));
-    gpio_set_level(DISPLAY_CS_PIN, 1);
-    vTaskDelay(pdMS_TO_TICKS(120));
+    // Initialize GPIO
+    display_gpio_init();
+    
+    // Turn on backlight first to see if it's working
+    ESP_LOGI(TAG, "Turning on backlight (GPIO %d)", DISPLAY_BACKLIGHT_PIN);
+    gpio_set_level(DISPLAY_BACKLIGHT_PIN, 1);
+    vTaskDelay(pdMS_TO_TICKS(100));
+    
+    // Software reset
+    ESP_LOGI(TAG, "Sending software reset (0x01)");
+    st7789_write_cmd(0x01);
+    vTaskDelay(pdMS_TO_TICKS(150));
     
     // Exit sleep mode
+    ESP_LOGI(TAG, "Exiting sleep mode (0x11)");
     st7789_write_cmd(0x11);
-    vTaskDelay(pdMS_TO_TICKS(120));
+    vTaskDelay(pdMS_TO_TICKS(150));
     
-    // Set display on
-    st7789_write_cmd(0x29);
-    
-    // Memory Data Access Control - RGB mode
-    uint8_t madctl = 0x00;  // RGB, top to bottom, left to right
+    // Memory Data Access Control - BGR format, normal orientation
+    // 0x00 = RGB, 0x08 = BGR
+    ESP_LOGI(TAG, "Setting MADCTL (0x36) - BGR format");
+    uint8_t madctl = 0x08;  // BGR color format
     st7789_write_cmd(0x36);
     st7789_write_data(&madctl, 1);
     
     // Pixel format: 16-bit/pixel (RGB565)
+    ESP_LOGI(TAG, "Setting pixel format (0x3A)");
     uint8_t colmod = 0x55;
     st7789_write_cmd(0x3A);
     st7789_write_data(&colmod, 1);
     
     // Set column address (240 width)
+    ESP_LOGI(TAG, "Setting column address (0x2A)");
     uint8_t caset[] = {0x00, 0x00, 0x00, 0xEF};  // 0-239
     st7789_write_cmd(0x2A);
     st7789_write_data(caset, 4);
     
     // Set row address (284 height)
+    ESP_LOGI(TAG, "Setting row address (0x2B)");
     uint8_t raset[] = {0x00, 0x00, 0x01, 0x1B};  // 0-283
     st7789_write_cmd(0x2B);
     st7789_write_data(raset, 4);
     
-    // Enable tearing effect
-    st7789_write_cmd(0x35);
+    // Display inversion ON (common for ST7789)
+    ESP_LOGI(TAG, "Enabling display inversion (0x21)");
+    st7789_write_cmd(0x21);
+    vTaskDelay(pdMS_TO_TICKS(50));
     
     // Turn on display
+    ESP_LOGI(TAG, "Turning on display (0x29)");
     st7789_write_cmd(0x29);
+    vTaskDelay(pdMS_TO_TICKS(50));
     
-    // Turn on backlight
-    gpio_set_level(DISPLAY_BACKLIGHT_PIN, 1);
+    // Fill screen with colors to test
+    ESP_LOGI(TAG, "Testing with WHITE screen first");
+    display_fill(0xFFFF);  // White
+    vTaskDelay(pdMS_TO_TICKS(1000));
     
     ESP_LOGI(TAG, "ST7789 initialization complete");
 }
@@ -168,12 +187,12 @@ static esp_err_t spi_master_init(void)
         .max_transfer_sz = DISPLAY_WIDTH * DISPLAY_HEIGHT * 2,
     };
     
-    // SPI device configuration - ST7789 uses mode 3 (CPOL=1, CPHA=1)
+    // SPI device configuration - Try mode 0 (some ST7789 variants)
     spi_device_interface_config_t devcfg = {
-        .clock_speed_hz = 24 * 1000 * 1000,  // 24 MHz (conservative for stability)
-        .mode = 3,  // ST7789 requires SPI mode 3
+        .clock_speed_hz = 20 * 1000 * 1000,  // 20 MHz
+        .mode = 0,  // Try SPI mode 0 (CPOL=0, CPHA=0)
         .spics_io_num = DISPLAY_CS_PIN,
-        .queue_size = 4,
+        .queue_size = 1,  // Single transaction queue to avoid conflicts
         .flags = 0,
     };
     
@@ -213,40 +232,48 @@ static void backlight_init(void)
 
 esp_err_t display_init(void)
 {
+    ESP_LOGI(TAG, "========================================");
     ESP_LOGI(TAG, "Initializing display (SPI, %dx%d)", DISPLAY_WIDTH, DISPLAY_HEIGHT);
+    ESP_LOGI(TAG, "========================================");
     
     esp_err_t ret;
     
     // Initialize I2C (shared with audio codec)
+    ESP_LOGI(TAG, "Step 1: Initializing I2C...");
     ret = i2c_master_init();
     if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to initialize I2C");
+        ESP_LOGE(TAG, "FAILED: I2C init (error %d)", ret);
         return ret;
     }
-    ESP_LOGI(TAG, "I2C initialized");
+    ESP_LOGI(TAG, "SUCCESS: I2C initialized");
     
     // Initialize SPI
+    ESP_LOGI(TAG, "Step 2: Initializing SPI...");
     ret = spi_master_init();
     if (ret != ESP_OK) {
-        ESP_LOGE(TAG, "Failed to initialize SPI");
+        ESP_LOGE(TAG, "FAILED: SPI init (error %d)", ret);
         return ret;
     }
-    ESP_LOGI(TAG, "SPI initialized");
+    ESP_LOGI(TAG, "SUCCESS: SPI initialized");
     
     // Initialize backlight
+    ESP_LOGI(TAG, "Step 3: Initializing backlight...");
     backlight_init();
-    ESP_LOGI(TAG, "Backlight initialized");
+    ESP_LOGI(TAG, "SUCCESS: Backlight initialized");
     
-    // TODO: Initialize display controller (ST7789/ILI9341/etc.)
-    // TODO: Set display orientation, inversion, etc.
+    // Initialize display controller
+    ESP_LOGI(TAG, "Step 4: Initializing ST7789 controller...");
+    st7789_init();
+    ESP_LOGI(TAG, "SUCCESS: ST7789 initialized - screen should be RED now!");
     
-    // Clear buffer
-    memset(display_buffer, 0x00, sizeof(display_buffer));
+    // DON'T clear - leave red for debugging!
+    // memset(display_buffer, 0x00, sizeof(display_buffer));
+    // display_update();
     
-    // Turn on backlight
-    gpio_set_level(DISPLAY_BACKLIGHT_PIN, 1);
-    
-    ESP_LOGI(TAG, "Display initialized (%dx%d)", DISPLAY_WIDTH, DISPLAY_HEIGHT);
+    ESP_LOGI(TAG, "========================================");
+    ESP_LOGI(TAG, "Display initialization COMPLETE!");
+    ESP_LOGI(TAG, "Starting color cycle test...");
+    ESP_LOGI(TAG, "========================================");
     return ESP_OK;
 }
 
@@ -279,10 +306,75 @@ void display_draw_circle(int x, int y, int radius, uint16_t color)
     // TODO: Implement circle drawing (Bresenham's algorithm)
 }
 
+/**
+ * @brief Fill screen with a solid color
+ */
+void display_fill(uint16_t color)
+{
+    ESP_LOGI(TAG, "Filling screen with color 0x%04X", color);
+    
+    // Set column address
+    uint8_t caset[] = {0x00, 0x00, 0x00, 0xEF};  // 0-239
+    st7789_write_cmd(0x2A);
+    st7789_write_data(caset, 4);
+    
+    // Set row address
+    uint8_t raset[] = {0x00, 0x00, 0x01, 0x1B};  // 0-283
+    st7789_write_cmd(0x2B);
+    st7789_write_data(raset, 4);
+    
+    // Write RAM command
+    st7789_write_cmd(0x2C);
+    
+    // Fill buffer with color
+    for (int i = 0; i < DISPLAY_WIDTH * DISPLAY_HEIGHT; i++) {
+        display_buffer[i] = color;
+    }
+    
+    // Send in chunks to avoid SPI max transfer size limit
+    // ESP32-S3 SPI max is ~64KB, screen is 136KB, so send 2 lines at a time
+    const int LINES_PER_CHUNK = 8;
+    const int CHUNK_SIZE = DISPLAY_WIDTH * LINES_PER_CHUNK;
+    
+    for (int chunk = 0; chunk < DISPLAY_HEIGHT; chunk += LINES_PER_CHUNK) {
+        spi_transaction_t t = {
+            .length = CHUNK_SIZE * 16,
+            .tx_buffer = &display_buffer[chunk * DISPLAY_WIDTH],
+        };
+        spi_device_transmit(spi_handle, &t);
+    }
+    
+    ESP_LOGI(TAG, "Screen filled with color 0x%04X", color);
+}
+
 void display_update(void)
 {
-    // TODO: Send buffer to display via SPI
-    ESP_LOGD(TAG, "Display update");
+    ESP_LOGD(TAG, "Updating display");
+    
+    // Set column address
+    uint8_t caset[] = {0x00, 0x00, 0x00, 0xEF};  // 0-239
+    st7789_write_cmd(0x2A);
+    st7789_write_data(caset, 4);
+    
+    // Set row address
+    uint8_t raset[] = {0x00, 0x00, 0x01, 0x1B};  // 0-283
+    st7789_write_cmd(0x2B);
+    st7789_write_data(raset, 4);
+    
+    // Write RAM command
+    st7789_write_cmd(0x2C);
+    
+    // Send in chunks to avoid SPI max transfer size limit
+    const int LINES_PER_CHUNK = 8;
+    const int CHUNK_SIZE = DISPLAY_WIDTH * LINES_PER_CHUNK;
+    
+    for (int chunk = 0; chunk < DISPLAY_HEIGHT; chunk += LINES_PER_CHUNK) {
+        spi_transaction_t t = {
+            .length = CHUNK_SIZE * 16,
+            .tx_buffer = &display_buffer[chunk * DISPLAY_WIDTH],
+        };
+        spi_device_transmit(spi_handle, &t);
+    }
 }
 
 void display_set_brightness(uint8_t brightness)

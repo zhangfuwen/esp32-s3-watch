@@ -9,6 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/admin/Code/esp32-s3-watch/main/bluetooth.c" "esp-idf/main/CMakeFiles/__idf_main.dir/bluetooth.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/bluetooth.c.obj.d"
+  "/home/admin/Code/esp32-s3-watch/main/comfort/breathing.c" "esp-idf/main/CMakeFiles/__idf_main.dir/comfort/breathing.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/comfort/breathing.c.obj.d"
+  "/home/admin/Code/esp32-s3-watch/main/comfort/emergency.c" "esp-idf/main/CMakeFiles/__idf_main.dir/comfort/emergency.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/comfort/emergency.c.obj.d"
+  "/home/admin/Code/esp32-s3-watch/main/comfort/messages.c" "esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.obj.d"
   "/home/admin/Code/esp32-s3-watch/main/display.c" "esp-idf/main/CMakeFiles/__idf_main.dir/display.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/display.c.obj.d"
   "/home/admin/Code/esp32-s3-watch/main/input.c" "esp-idf/main/CMakeFiles/__idf_main.dir/input.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/input.c.obj.d"
   "/home/admin/Code/esp32-s3-watch/main/main.c" "esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj.d"

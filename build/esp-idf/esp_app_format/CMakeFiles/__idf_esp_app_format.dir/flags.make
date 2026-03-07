@@ -8,5 +8,5 @@ C_INCLUDES = -I/home/admin/Code/esp32-s3-watch/build/config -I/home/admin/esp-id
 
 C_FLAGS = -mlongcalls  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/admin/Code/esp32-s3-watch=. -fmacro-prefix-map=/home/admin/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration
 
-# Custom defines: esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj_DEFINES = PROJECT_VER="f811351-dirty"; PROJECT_NAME="esp32_s3_watch"
+# Custom defines: esp-idf/esp_app_format/CMakeFiles/__idf_esp_app_format.dir/esp_app_desc.c.obj_DEFINES = PROJECT_VER="6a05798-dirty"; PROJECT_NAME="esp32_s3_watch"
 

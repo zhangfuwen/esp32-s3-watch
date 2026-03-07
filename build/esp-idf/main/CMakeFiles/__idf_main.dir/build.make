@@ -153,6 +153,48 @@ esp-idf/main/CMakeFiles/__idf_main.dir/bluetooth.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/bluetooth.c.s"
 	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/main && /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/admin/Code/esp32-s3-watch/main/bluetooth.c -o CMakeFiles/__idf_main.dir/bluetooth.c.s
 
+esp-idf/main/CMakeFiles/__idf_main.dir/comfort/breathing.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/comfort/breathing.c.obj: /home/admin/Code/esp32-s3-watch/main/comfort/breathing.c
+esp-idf/main/CMakeFiles/__idf_main.dir/comfort/breathing.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/Code/esp32-s3-watch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/comfort/breathing.c.obj"
+	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/main && /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/comfort/breathing.c.obj -MF CMakeFiles/__idf_main.dir/comfort/breathing.c.obj.d -o CMakeFiles/__idf_main.dir/comfort/breathing.c.obj -c /home/admin/Code/esp32-s3-watch/main/comfort/breathing.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/comfort/breathing.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_main.dir/comfort/breathing.c.i"
+	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/main && /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/admin/Code/esp32-s3-watch/main/comfort/breathing.c > CMakeFiles/__idf_main.dir/comfort/breathing.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/comfort/breathing.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/comfort/breathing.c.s"
+	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/main && /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/admin/Code/esp32-s3-watch/main/comfort/breathing.c -o CMakeFiles/__idf_main.dir/comfort/breathing.c.s
+
+esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.obj: /home/admin/Code/esp32-s3-watch/main/comfort/messages.c
+esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/Code/esp32-s3-watch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.obj"
+	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/main && /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.obj -MF CMakeFiles/__idf_main.dir/comfort/messages.c.obj.d -o CMakeFiles/__idf_main.dir/comfort/messages.c.obj -c /home/admin/Code/esp32-s3-watch/main/comfort/messages.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_main.dir/comfort/messages.c.i"
+	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/main && /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/admin/Code/esp32-s3-watch/main/comfort/messages.c > CMakeFiles/__idf_main.dir/comfort/messages.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/comfort/messages.c.s"
+	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/main && /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/admin/Code/esp32-s3-watch/main/comfort/messages.c -o CMakeFiles/__idf_main.dir/comfort/messages.c.s
+
+esp-idf/main/CMakeFiles/__idf_main.dir/comfort/emergency.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/flags.make
+esp-idf/main/CMakeFiles/__idf_main.dir/comfort/emergency.c.obj: /home/admin/Code/esp32-s3-watch/main/comfort/emergency.c
+esp-idf/main/CMakeFiles/__idf_main.dir/comfort/emergency.c.obj: esp-idf/main/CMakeFiles/__idf_main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/Code/esp32-s3-watch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object esp-idf/main/CMakeFiles/__idf_main.dir/comfort/emergency.c.obj"
+	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/main && /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/comfort/emergency.c.obj -MF CMakeFiles/__idf_main.dir/comfort/emergency.c.obj.d -o CMakeFiles/__idf_main.dir/comfort/emergency.c.obj -c /home/admin/Code/esp32-s3-watch/main/comfort/emergency.c
+
+esp-idf/main/CMakeFiles/__idf_main.dir/comfort/emergency.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_main.dir/comfort/emergency.c.i"
+	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/main && /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/admin/Code/esp32-s3-watch/main/comfort/emergency.c > CMakeFiles/__idf_main.dir/comfort/emergency.c.i
+
+esp-idf/main/CMakeFiles/__idf_main.dir/comfort/emergency.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_main.dir/comfort/emergency.c.s"
+	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/main && /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/admin/Code/esp32-s3-watch/main/comfort/emergency.c -o CMakeFiles/__idf_main.dir/comfort/emergency.c.s
+
 # Object files for target __idf_main
 __idf_main_OBJECTS = \
 "CMakeFiles/__idf_main.dir/main.c.obj" \
@@ -160,7 +202,10 @@ __idf_main_OBJECTS = \
 "CMakeFiles/__idf_main.dir/watch_face.c.obj" \
 "CMakeFiles/__idf_main.dir/input.c.obj" \
 "CMakeFiles/__idf_main.dir/wifi.c.obj" \
-"CMakeFiles/__idf_main.dir/bluetooth.c.obj"
+"CMakeFiles/__idf_main.dir/bluetooth.c.obj" \
+"CMakeFiles/__idf_main.dir/comfort/breathing.c.obj" \
+"CMakeFiles/__idf_main.dir/comfort/messages.c.obj" \
+"CMakeFiles/__idf_main.dir/comfort/emergency.c.obj"
 
 # External object files for target __idf_main
 __idf_main_EXTERNAL_OBJECTS =
@@ -171,9 +216,12 @@ esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/watch_face.c.obj
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/input.c.obj
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/wifi.c.obj
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/bluetooth.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/comfort/breathing.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.obj
+esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/comfort/emergency.c.obj
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/build.make
 esp-idf/main/libmain.a: esp-idf/main/CMakeFiles/__idf_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin/Code/esp32-s3-watch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C static library libmain.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin/Code/esp32-s3-watch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C static library libmain.a"
 	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/main && $(CMAKE_COMMAND) -P CMakeFiles/__idf_main.dir/cmake_clean_target.cmake
 	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/main && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_main.dir/link.txt --verbose=$(VERBOSE)
 

@@ -199,6 +199,78 @@ bluetooth.c.s:
 	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/bluetooth.c.s
 .PHONY : bluetooth.c.s
 
+comfort/breathing.obj: comfort/breathing.c.obj
+.PHONY : comfort/breathing.obj
+
+# target to build an object file
+comfort/breathing.c.obj:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/comfort/breathing.c.obj
+.PHONY : comfort/breathing.c.obj
+
+comfort/breathing.i: comfort/breathing.c.i
+.PHONY : comfort/breathing.i
+
+# target to preprocess a source file
+comfort/breathing.c.i:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/comfort/breathing.c.i
+.PHONY : comfort/breathing.c.i
+
+comfort/breathing.s: comfort/breathing.c.s
+.PHONY : comfort/breathing.s
+
+# target to generate assembly for a file
+comfort/breathing.c.s:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/comfort/breathing.c.s
+.PHONY : comfort/breathing.c.s
+
+comfort/emergency.obj: comfort/emergency.c.obj
+.PHONY : comfort/emergency.obj
+
+# target to build an object file
+comfort/emergency.c.obj:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/comfort/emergency.c.obj
+.PHONY : comfort/emergency.c.obj
+
+comfort/emergency.i: comfort/emergency.c.i
+.PHONY : comfort/emergency.i
+
+# target to preprocess a source file
+comfort/emergency.c.i:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/comfort/emergency.c.i
+.PHONY : comfort/emergency.c.i
+
+comfort/emergency.s: comfort/emergency.c.s
+.PHONY : comfort/emergency.s
+
+# target to generate assembly for a file
+comfort/emergency.c.s:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/comfort/emergency.c.s
+.PHONY : comfort/emergency.c.s
+
+comfort/messages.obj: comfort/messages.c.obj
+.PHONY : comfort/messages.obj
+
+# target to build an object file
+comfort/messages.c.obj:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.obj
+.PHONY : comfort/messages.c.obj
+
+comfort/messages.i: comfort/messages.c.i
+.PHONY : comfort/messages.i
+
+# target to preprocess a source file
+comfort/messages.c.i:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.i
+.PHONY : comfort/messages.c.i
+
+comfort/messages.s: comfort/messages.c.s
+.PHONY : comfort/messages.s
+
+# target to generate assembly for a file
+comfort/messages.c.s:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.s
+.PHONY : comfort/messages.c.s
+
 display.obj: display.c.obj
 .PHONY : display.obj
 
@@ -335,6 +407,15 @@ help:
 	@echo "... bluetooth.obj"
 	@echo "... bluetooth.i"
 	@echo "... bluetooth.s"
+	@echo "... comfort/breathing.obj"
+	@echo "... comfort/breathing.i"
+	@echo "... comfort/breathing.s"
+	@echo "... comfort/emergency.obj"
+	@echo "... comfort/emergency.i"
+	@echo "... comfort/emergency.s"
+	@echo "... comfort/messages.obj"
+	@echo "... comfort/messages.i"
+	@echo "... comfort/messages.s"
 	@echo "... display.obj"
 	@echo "... display.i"
 	@echo "... display.s"

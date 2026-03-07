@@ -1,6 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/__idf_main.dir/bluetooth.c.obj"
   "CMakeFiles/__idf_main.dir/bluetooth.c.obj.d"
+  "CMakeFiles/__idf_main.dir/comfort/breathing.c.obj"
+  "CMakeFiles/__idf_main.dir/comfort/breathing.c.obj.d"
+  "CMakeFiles/__idf_main.dir/comfort/emergency.c.obj"
+  "CMakeFiles/__idf_main.dir/comfort/emergency.c.obj.d"
+  "CMakeFiles/__idf_main.dir/comfort/messages.c.obj"
+  "CMakeFiles/__idf_main.dir/comfort/messages.c.obj.d"
   "CMakeFiles/__idf_main.dir/display.c.obj"
   "CMakeFiles/__idf_main.dir/display.c.obj.d"
   "CMakeFiles/__idf_main.dir/input.c.obj"

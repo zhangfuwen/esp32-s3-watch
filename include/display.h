@@ -68,6 +68,12 @@ void display_draw_circle(int x, int y, int radius, uint16_t color);
 void display_update(void);
 
 /**
+ * @brief Fill screen with solid color
+ * @param color Color in RGB565 format
+ */
+void display_fill(uint16_t color);
+
+/**
  * @brief Set display brightness
  * @param brightness Brightness level (0-255)
  */
