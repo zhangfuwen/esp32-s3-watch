@@ -8,7 +8,7 @@
 
 #include "emergency.h"
 #include "display.h"
-#include "../input.h"
+#include "input.h"
 #include <string.h>
 #include <stdio.h>
 
