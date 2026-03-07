@@ -170,6 +170,7 @@ esp32_s3_watch.elf: esp-idf/protocomm/libprotocomm.a
 esp32_s3_watch.elf: esp-idf/console/libconsole.a
 esp32_s3_watch.elf: esp-idf/protobuf-c/libprotobuf-c.a
 esp32_s3_watch.elf: esp-idf/json/libjson.a
+esp32_s3_watch.elf: esp-idf/esp_lcd/libesp_lcd.a
 esp32_s3_watch.elf: esp-idf/xtensa/libxtensa.a
 esp32_s3_watch.elf: esp-idf/esp_ringbuf/libesp_ringbuf.a
 esp32_s3_watch.elf: esp-idf/efuse/libefuse.a

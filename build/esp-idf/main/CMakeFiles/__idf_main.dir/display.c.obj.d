@@ -56,7 +56,6 @@ esp-idf/main/CMakeFiles/__idf_main.dir/display.c.obj: \
  /home/admin/esp-idf/components/esp_rom/include/esp_rom_sys.h \
  /home/admin/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
  /home/admin/esp-idf/components/log/include/esp_log_internal.h \
- /home/admin/esp-idf/components/driver/spi/include/driver/spi_master.h \
  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h \
  /home/admin/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
  /home/admin/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
@@ -117,10 +116,15 @@ esp-idf/main/CMakeFiles/__idf_main.dir/display.c.obj: \
  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/stream_buffer.h \
  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/event_groups.h \
  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/timers.h \
- /home/admin/esp-idf/components/hal/include/hal/spi_types.h \
+ /home/admin/esp-idf/components/esp_lcd/include/esp_lcd_panel_io.h \
+ /home/admin/esp-idf/components/esp_lcd/include/esp_lcd_types.h \
+ /home/admin/esp-idf/components/hal/include/hal/lcd_types.h \
  /home/admin/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+ /home/admin/esp-idf/components/hal/include/hal/i2c_types.h \
+ /home/admin/esp-idf/components/driver/i2c/include/driver/i2c_types.h \
+ /home/admin/esp-idf/components/esp_lcd/include/esp_lcd_panel_ops.h \
+ /home/admin/esp-idf/components/esp_lcd/include/esp_lcd_panel_vendor.h \
+ /home/admin/esp-idf/components/driver/spi/include/driver/spi_master.h \
+ /home/admin/esp-idf/components/hal/include/hal/spi_types.h \
  /home/admin/esp-idf/components/driver/spi/include/driver/spi_common.h \
- /home/admin/esp-idf/components/esp_system/include/esp_ipc.h \
- /home/admin/esp-idf/components/driver/i2c/include/driver/i2c.h \
- /home/admin/esp-idf/components/esp_common/include/esp_types.h \
- /home/admin/esp-idf/components/hal/include/hal/i2c_types.h
+ /home/admin/esp-idf/components/esp_system/include/esp_ipc.h

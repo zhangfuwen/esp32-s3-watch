@@ -24,4 +24,5 @@ idf_component_register(
         esp_hw_support
         esp_netif
         esp_timer
+        esp_lcd
 )

@@ -28,6 +28,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "flash_args.in"
   "ldgen_libraries.in"
   "/home/admin/Code/esp32-s3-watch/main/CMakeLists.txt"
+  "/home/admin/Code/esp32-s3-watch/main/idf_component.yml"
   "/home/admin/Code/esp32-s3-watch/sdkconfig"
   "/home/admin/esp-idf/.git/HEAD"
   "/home/admin/esp-idf/.git/modules/components/bootloader/subproject/components/micro-ecc/micro-ecc/HEAD"
