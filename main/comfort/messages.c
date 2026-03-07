@@ -7,7 +7,7 @@
  */
 
 #include "messages.h"
-#include "../display.h"
+#include "display.h"
 #include <string.h>
 #include <stdio.h>
 #include <time.h>
