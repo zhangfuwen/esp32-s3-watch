@@ -11,6 +11,7 @@
 #include "input.h"
 #include <string.h>
 #include <stdio.h>
+#include <math.h>
 
 // ESP-IDF includes
 #include "esp_log.h"

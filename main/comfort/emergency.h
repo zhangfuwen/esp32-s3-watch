@@ -26,7 +26,7 @@ typedef enum {
  */
 typedef struct {
     bool enabled;                     // Enable emergency calm feature
-    uint8_t activation_duration_ms;   // How long to hold both buttons (default: 1000)
+    uint16_t activation_duration_ms;  // How long to hold both buttons (default: 1000)
     uint8_t auto_exit_minutes;        // Auto-exit after X minutes (default: 2)
     bool haptic_enabled;              // Enable haptic feedback
     bool audio_enabled;               // Enable soothing audio (future)
