@@ -47,11 +47,116 @@ static esp_err_t i2c_master_init(void)
 }
 
 /**
+ * @brief Initialize GPIO for display control
+ */
+static void display_gpio_init(void)
+{
+    // Configure DC pin
+    gpio_reset_pin(DISPLAY_DC_PIN);
+    gpio_set_direction(DISPLAY_DC_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_level(DISPLAY_DC_PIN, 0);
+    
+    // Configure backlight pin
+    gpio_reset_pin(DISPLAY_BACKLIGHT_PIN);
+    gpio_set_direction(DISPLAY_BACKLIGHT_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_level(DISPLAY_BACKLIGHT_PIN, 0);
+    
+    // Configure CS pin
+    gpio_reset_pin(DISPLAY_CS_PIN);
+    gpio_set_direction(DISPLAY_CS_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_level(DISPLAY_CS_PIN, 1);
+    
+    ESP_LOGI(TAG, "Display GPIO initialized");
+}
+
+/**
+ * @brief Send command to ST7789 display
+ */
+static void st7789_write_cmd(uint8_t cmd)
+{
+    gpio_set_level(DISPLAY_DC_PIN, 0);  // Command mode
+    spi_transaction_t t = {
+        .length = 8,
+        .tx_buffer = &cmd,
+        .flags = SPI_TRANS_USE_TXDATA
+    };
+    spi_device_transmit(spi_handle, &t);
+}
+
+/**
+ * @brief Send data to ST7789 display
+ */
+static void st7789_write_data(const uint8_t *data, int len)
+{
+    gpio_set_level(DISPLAY_DC_PIN, 1);  // Data mode
+    spi_transaction_t t = {
+        .length = len * 8,
+        .tx_buffer = data
+    };
+    spi_device_transmit(spi_handle, &t);
+}
+
+/**
+ * @brief Initialize ST7789 display controller
+ */
+static void st7789_init(void)
+{
+    ESP_LOGI(TAG, "Initializing ST7789 display controller...");
+    
+    // Hardware reset (toggle CS since no RST pin)
+    gpio_set_level(DISPLAY_CS_PIN, 0);
+    vTaskDelay(pdMS_TO_TICKS(10));
+    gpio_set_level(DISPLAY_CS_PIN, 1);
+    vTaskDelay(pdMS_TO_TICKS(120));
+    
+    // Exit sleep mode
+    st7789_write_cmd(0x11);
+    vTaskDelay(pdMS_TO_TICKS(120));
+    
+    // Set display on
+    st7789_write_cmd(0x29);
+    
+    // Memory Data Access Control - RGB mode
+    uint8_t madctl = 0x00;  // RGB, top to bottom, left to right
+    st7789_write_cmd(0x36);
+    st7789_write_data(&madctl, 1);
+    
+    // Pixel format: 16-bit/pixel (RGB565)
+    uint8_t colmod = 0x55;
+    st7789_write_cmd(0x3A);
+    st7789_write_data(&colmod, 1);
+    
+    // Set column address (240 width)
+    uint8_t caset[] = {0x00, 0x00, 0x00, 0xEF};  // 0-239
+    st7789_write_cmd(0x2A);
+    st7789_write_data(caset, 4);
+    
+    // Set row address (284 height)
+    uint8_t raset[] = {0x00, 0x00, 0x01, 0x1B};  // 0-283
+    st7789_write_cmd(0x2B);
+    st7789_write_data(raset, 4);
+    
+    // Enable tearing effect
+    st7789_write_cmd(0x35);
+    
+    // Turn on display
+    st7789_write_cmd(0x29);
+    
+    // Turn on backlight
+    gpio_set_level(DISPLAY_BACKLIGHT_PIN, 1);
+    
+    ESP_LOGI(TAG, "ST7789 initialization complete");
+}
+
+/**
  * @brief Initialize SPI bus for display
  */
 static esp_err_t spi_master_init(void)
 {
     esp_err_t ret;
+    
+    // Initialize GPIO first
+    display_gpio_init();
     
     // SPI bus configuration
     spi_bus_config_t buscfg = {
@@ -63,10 +168,10 @@ static esp_err_t spi_master_init(void)
         .max_transfer_sz = DISPLAY_WIDTH * DISPLAY_HEIGHT * 2,
     };
     
-    // SPI device configuration
+    // SPI device configuration - ST7789 uses mode 3 (CPOL=1, CPHA=1)
     spi_device_interface_config_t devcfg = {
-        .clock_speed_hz = 40 * 1000 * 1000,  // 40 MHz
-        .mode = 0,
+        .clock_speed_hz = 24 * 1000 * 1000,  // 24 MHz (conservative for stability)
+        .mode = 3,  // ST7789 requires SPI mode 3
         .spics_io_num = DISPLAY_CS_PIN,
         .queue_size = 4,
         .flags = 0,
