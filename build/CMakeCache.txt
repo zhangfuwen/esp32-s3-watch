@@ -601,6 +601,8 @@ _Python3_EXECUTABLE:INTERNAL=/home/admin/.espressif/python_env/idf5.2_py3.11_env
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;11;13;32;;;abi3;/usr/lib64/python3.11;/usr/lib64/python3.11;/home/admin/.espressif/python_env/idf5.2_py3.11_env/lib/python3.11/site-packages;/home/admin/.espressif/python_env/idf5.2_py3.11_env/lib64/python3.11/site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=ea6fad33adfc09075bbec7d4169b6696
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 

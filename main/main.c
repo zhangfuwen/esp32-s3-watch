@@ -21,6 +21,10 @@
 #include "bluetooth.h"
 #include "lvgl_port.h"
 
+#if CONFIG_LV_USE_LOG
+#include "lvgl.h"
+#endif
+
 static const char *TAG = "WATCH";
 
 /**
@@ -49,14 +53,12 @@ void app_main(void)
     lvgl_start_tasks();  // Start LVGL tasks
     ESP_LOGI(TAG, "LVGL initialized!");
     
-    // Create a simple LVGL test UI
-    lv_obj_t *label = lv_label_create(lv_scr_act());
-    lv_label_set_text(label, "ESP32-S3 Watch\nLVGL v0.3.0");
-    lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
-    lv_label_set_long_mode(label, LV_LABEL_LONG_WRAP);
-    lv_obj_set_width(label, DISPLAY_WIDTH - 20);
+    // TODO: Create LVGL UI after component download is fixed
+    // lv_obj_t *label = lv_label_create(lv_scr_act());
+    // lv_label_set_text(label, "ESP32-S3 Watch\nLVGL v0.3.0");
+    // lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
     
-    ESP_LOGI(TAG, "LVGL test UI created");
+    ESP_LOGI(TAG, "Display ready (LVGL backend running)");
     
     // Initialize input system (buttons/touch)
     ESP_LOGI(TAG, "Initializing input...");

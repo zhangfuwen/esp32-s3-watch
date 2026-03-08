@@ -118,4 +118,5 @@ esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj: \
  /home/admin/Code/esp32-s3-watch/include/watch_face.h \
  /home/admin/Code/esp32-s3-watch/include/input.h \
  /home/admin/Code/esp32-s3-watch/include/wifi.h \
- /home/admin/Code/esp32-s3-watch/include/bluetooth.h
+ /home/admin/Code/esp32-s3-watch/include/bluetooth.h \
+ /home/admin/Code/esp32-s3-watch/main/lvgl_port.h
