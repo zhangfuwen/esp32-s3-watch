@@ -136,18 +136,60 @@ esp_err_t display_init(void)
 
 void display_clear(void)
 {
-    uint16_t black = 0x0000;
-    esp_lcd_panel_draw_bitmap(panel, 0, 0, DISPLAY_WIDTH, DISPLAY_HEIGHT, &black);
+    display_fill(0x0000);  // Black
 }
 
 void display_fill(uint16_t color)
 {
-    esp_lcd_panel_draw_bitmap(panel, 0, 0, DISPLAY_WIDTH, DISPLAY_HEIGHT, &color);
+    // Allocate buffer for one line (PSRAM available, can use larger buffer)
+    uint16_t *line_buffer = malloc(DISPLAY_WIDTH * sizeof(uint16_t));
+    if (!line_buffer) {
+        ESP_LOGE(TAG, "Failed to allocate line buffer!");
+        return;
+    }
+    
+    // Fill buffer with specified color
+    for (int i = 0; i < DISPLAY_WIDTH; i++) {
+        line_buffer[i] = color;
+    }
+    
+    // Draw line by line
+    for (int y = 0; y < DISPLAY_HEIGHT; y++) {
+        esp_lcd_panel_draw_bitmap(panel, 0, y, DISPLAY_WIDTH, y + 1, line_buffer);
+    }
+    
+    free(line_buffer);
 }
 
 void display_draw_text(int x, int y, const char *text) { ESP_LOGD(TAG, "Text: %s", text); }
-void display_draw_pixel(int x, int y, uint16_t color) { esp_lcd_panel_draw_bitmap(panel, x, y, x+1, y+1, &color); }
-void display_draw_rect(int x, int y, int w, int h, uint16_t color) { esp_lcd_panel_draw_bitmap(panel, x, y, x+w, y+h, &color); }
+
+void display_draw_pixel(int x, int y, uint16_t color) 
+{
+    if (x < 0 || x >= DISPLAY_WIDTH || y < 0 || y >= DISPLAY_HEIGHT) return;
+    esp_lcd_panel_draw_bitmap(panel, x, y, x+1, y+1, &color);
+}
+
+void display_draw_rect(int x, int y, int w, int h, uint16_t color) 
+{
+    if (x < 0 || y < 0 || x + w > DISPLAY_WIDTH || y + h > DISPLAY_HEIGHT) return;
+    
+    // Allocate buffer for one line of the rectangle
+    uint16_t *line_buffer = malloc(w * sizeof(uint16_t));
+    if (!line_buffer) return;
+    
+    // Fill with color
+    for (int i = 0; i < w; i++) {
+        line_buffer[i] = color;
+    }
+    
+    // Draw line by line
+    for (int row = 0; row < h; row++) {
+        esp_lcd_panel_draw_bitmap(panel, x, y + row, x + w, y + row + 1, line_buffer);
+    }
+    
+    free(line_buffer);
+}
+
 void display_draw_circle(int x, int y, int r, uint16_t color) { ESP_LOGD(TAG, "Circle"); }
 void display_update(void) {}
 void display_set_brightness(uint8_t b) { ESP_LOGD(TAG, "Brightness: %d", b); }
