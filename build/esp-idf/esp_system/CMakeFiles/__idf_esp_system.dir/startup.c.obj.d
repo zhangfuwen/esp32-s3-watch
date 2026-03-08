@@ -228,4 +228,6 @@ esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/startup.c.obj: \
  /home/admin/esp-idf/components/spi_flash/include/spi_flash_override.h \
  /home/admin/esp-idf/components/esp_system/port/include/private/esp_private/brownout.h \
  /home/admin/esp-idf/components/esp_rom/esp32s3/esp_rom_caps.h \
+ /home/admin/esp-idf/components/esp_psram/include/esp_psram.h \
+ /home/admin/esp-idf/components/esp_psram/include/esp_private/esp_psram_extram.h \
  /home/admin/esp-idf/components/esp_system/include/esp_private/startup_internal.h

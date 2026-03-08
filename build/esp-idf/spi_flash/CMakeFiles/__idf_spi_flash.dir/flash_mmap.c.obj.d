@@ -121,6 +121,12 @@ esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/flash_mmap.c.obj: \
  /home/admin/esp-idf/components/esp_mm/include/esp_mmu_map.h \
  /home/admin/esp-idf/components/esp_rom/include/esp_rom_spiflash.h \
  /home/admin/esp-idf/components/esp_rom/include/esp_rom_spiflash_defs.h \
+ /home/admin/esp-idf/components/esp_psram/include/esp_private/esp_psram_extram.h \
+ /home/admin/esp-idf/components/esp_psram/include/esp_private/mmu_psram_flash.h \
+ /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/param.h \
+ /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/endian.h \
+ /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_endian.h \
+ /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/param.h \
  /home/admin/esp-idf/components/spi_flash/include/esp_private/cache_utils.h \
  /home/admin/esp-idf/components/spi_flash/include/spi_flash_mmap.h \
  /home/admin/esp-idf/components/spi_flash/include/esp_spi_flash_counters.h

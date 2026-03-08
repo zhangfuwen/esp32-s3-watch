@@ -67,7 +67,7 @@ include CMakeFiles/dfu.dir/compiler_depend.make
 include CMakeFiles/dfu.dir/progress.make
 
 CMakeFiles/dfu: bootloader
-	/home/admin/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/admin/esp-idf/tools/mkdfu.py write -o /home/admin/Code/esp32-s3-watch/build/bootloader/dfu.bin --json /home/admin/Code/esp32-s3-watch/build/bootloader/flasher_args.json --pid 9 --flash-size 2MB
+	/home/admin/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/admin/esp-idf/tools/mkdfu.py write -o /home/admin/Code/esp32-s3-watch/build/bootloader/dfu.bin --json /home/admin/Code/esp32-s3-watch/build/bootloader/flasher_args.json --pid 9 --flash-size 16MB
 
 dfu: CMakeFiles/dfu
 dfu: CMakeFiles/dfu.dir/build.make

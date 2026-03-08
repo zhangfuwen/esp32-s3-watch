@@ -97,6 +97,14 @@ esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/cpu_start.c.obj: \
  /home/admin/esp-idf/components/hal/include/hal/cache_types.h \
  /home/admin/esp-idf/components/esp_mm/include/esp_private/esp_mmu_map_private.h \
  /home/admin/esp-idf/components/hal/include/hal/mmu_types.h \
+ /home/admin/esp-idf/components/esp_psram/include/esp_psram.h \
+ /home/admin/esp-idf/components/esp_psram/include/esp_private/mmu_psram_flash.h \
+ /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/param.h \
+ /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/syslimits.h \
+ /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/endian.h \
+ /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_endian.h \
+ /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/param.h \
+ /home/admin/esp-idf/components/esp_psram/include/esp_private/esp_psram_extram.h \
  /home/admin/esp-idf/components/spi_flash/include/esp_private/spi_flash_os.h \
  /home/admin/esp-idf/components/spi_flash/include/esp_flash.h \
  /home/admin/esp-idf/components/hal/include/hal/spi_flash_types.h \
@@ -120,11 +128,6 @@ esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/cpu_start.c.obj: \
  /home/admin/esp-idf/components/soc/esp32s3/include/soc/spi_mem_struct.h \
  /home/admin/esp-idf/components/soc/esp32s3/include/soc/spi_mem_reg.h \
  /home/admin/esp-idf/components/hal/include/hal/spi_types.h \
- /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/param.h \
- /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/syslimits.h \
- /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/endian.h \
- /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_endian.h \
- /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/param.h \
  /home/admin/esp-idf/components/hal/esp32s3/include/hal/spimem_flash_ll.h \
  /home/admin/esp-idf/components/hal/platform_port/include/hal/assert.h \
  /home/admin/esp-idf/components/spi_flash/include/spi_flash_override.h \

@@ -70,7 +70,7 @@ CMakeFiles/gen_project_binary: .bin_timestamp
 
 .bin_timestamp: bootloader.elf
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/admin/Code/esp32-s3-watch/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
-	/home/admin/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/admin/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32s3 elf2image --flash_mode dio --flash_freq 80m --flash_size 2MB --min-rev-full 0 --max-rev-full 99 -o /home/admin/Code/esp32-s3-watch/build/bootloader/bootloader.bin /home/admin/Code/esp32-s3-watch/build/bootloader/bootloader.elf
+	/home/admin/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/admin/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32s3 elf2image --flash_mode dio --flash_freq 80m --flash_size 16MB --min-rev-full 0 --max-rev-full 99 -o /home/admin/Code/esp32-s3-watch/build/bootloader/bootloader.bin /home/admin/Code/esp32-s3-watch/build/bootloader/bootloader.elf
 	/usr/bin/cmake -E echo "Generated /home/admin/Code/esp32-s3-watch/build/bootloader/bootloader.bin"
 	/usr/bin/cmake -E md5sum /home/admin/Code/esp32-s3-watch/build/bootloader/bootloader.bin > /home/admin/Code/esp32-s3-watch/build/bootloader/.bin_timestamp
 
