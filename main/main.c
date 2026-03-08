@@ -19,6 +19,7 @@
 #include "input.h"
 #include "wifi.h"
 #include "bluetooth.h"
+#include "lvgl_port.h"
 
 static const char *TAG = "WATCH";
 
@@ -41,23 +42,21 @@ void app_main(void)
     ESP_ERROR_CHECK(ret);
     ESP_LOGI(TAG, "NVS initialized");
 
-    // Initialize display
-    ESP_LOGI(TAG, "Calling display_init()...");
-    display_init();
-    ESP_LOGI(TAG, "display_init() returned - starting color cycle test!");
+    // Initialize display with LVGL
+    ESP_LOGI(TAG, "Initializing LVGL display...");
+    display_init();  // Initialize hardware
+    lvgl_init_system();  // Initialize LVGL
+    lvgl_start_tasks();  // Start LVGL tasks
+    ESP_LOGI(TAG, "LVGL initialized!");
     
-    // Color cycle test loop - changes color every 2 seconds
-    // This helps diagnose display issues even if you connect late
-    uint16_t test_colors[] = {
-        0xF800,  // Red
-        0x07E0,  // Green
-        0x001F,  // Blue
-        0xFFFF,  // White
-        0x0000,  // Black
-    };
-    const char* color_names[] = {"RED", "GREEN", "BLUE", "WHITE", "BLACK"};
+    // Create a simple LVGL test UI
+    lv_obj_t *label = lv_label_create(lv_scr_act());
+    lv_label_set_text(label, "ESP32-S3 Watch\nLVGL v0.3.0");
+    lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
+    lv_label_set_long_mode(label, LV_LABEL_LONG_WRAP);
+    lv_obj_set_width(label, DISPLAY_WIDTH - 20);
     
-    ESP_LOGI(TAG, "Starting color cycle test loop...");
+    ESP_LOGI(TAG, "LVGL test UI created");
     
     // Initialize input system (buttons/touch)
     ESP_LOGI(TAG, "Initializing input...");
@@ -76,21 +75,9 @@ void app_main(void)
     // watch_face_start();
     
     ESP_LOGI(TAG, "=== System Ready ===");
-    ESP_LOGI(TAG, "Display init complete - keeping RED screen for testing");
-    ESP_LOGI(TAG, "Screen should show SOLID RED from display_init()");
+    ESP_LOGI(TAG, "LVGL is running - UI should be visible");
     
-    // Keep display_init state - don't change colors
-    // Commented out color cycle for debugging
-    /*
-    int color_index = 0;
-    while (1) {
-        display_fill(test_colors[color_index]);
-        vTaskDelay(pdMS_TO_TICKS(3000));
-        color_index = (color_index + 1) % 5;
-    }
-    */
-    
-    // Just idle forever to keep display_init state
+    // Keep alive forever
     while (1) {
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
