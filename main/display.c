@@ -45,8 +45,8 @@ esp_err_t display_init(void)
     const esp_lcd_panel_io_spi_config_t io_config = {
         .cs_gpio_num = DISPLAY_CS_PIN,
         .dc_gpio_num = DISPLAY_DC_PIN,
-        .spi_mode = 3,
-        .pclk_hz = 20 * 1000 * 1000,
+        .spi_mode = 0,  // Try Mode 0 instead of Mode 3
+        .pclk_hz = 10 * 1000 * 1000,  // Lower speed: 10MHz for reliability
         .trans_queue_depth = 10,
         .lcd_cmd_bits = 8,
         .lcd_param_bits = 8,
@@ -58,15 +58,16 @@ esp_err_t display_init(void)
     ESP_LOGI(TAG, "3. ST7789 panel...");
     const esp_lcd_panel_dev_config_t panel_config = {
         .reset_gpio_num = DISPLAY_RESET_PIN,
-        .rgb_ele_order = LCD_RGB_ELEMENT_ORDER_RGB,
+        .rgb_ele_order = LCD_RGB_ELEMENT_ORDER_BGR,  // Try BGR for correct colors
         .bits_per_pixel = 16,
     };
     ESP_ERROR_CHECK(esp_lcd_new_panel_st7789(panel_io, &panel_config, &panel));
     ESP_LOGI(TAG, "Panel OK");
     
     // Reset
-    ESP_LOGI(TAG, "4. Reset...");
+    ESP_LOGI(TAG, "4. Reset (software)...");
     ESP_ERROR_CHECK(esp_lcd_panel_reset(panel));
+    vTaskDelay(pdMS_TO_TICKS(100));  // Extra delay for display to stabilize
     ESP_LOGI(TAG, "Reset OK");
     
     // Init
