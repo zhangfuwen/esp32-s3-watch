@@ -71,9 +71,9 @@ void app_main(void)
     ESP_LOGI(TAG, "Initializing Bluetooth...");
     bluetooth_init();
     
-    // Start watch face task
-    ESP_LOGI(TAG, "Starting watch face...");
-    watch_face_start();
+    // Start watch face task - COMMENTED OUT for debugging
+    // ESP_LOGI(TAG, "Starting watch face...");
+    // watch_face_start();
     
     ESP_LOGI(TAG, "=== System Ready ===");
     ESP_LOGI(TAG, "Display init complete - keeping RED screen for testing");
