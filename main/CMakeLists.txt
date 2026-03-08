@@ -7,6 +7,8 @@ idf_component_register(
         "input.c"
         "wifi.c"
         "bluetooth.c"
+        "lvgl_port.c"
+        "touch.c"
         # Emotional Comfort Features
         "comfort/breathing.c"
         "comfort/messages.c"
@@ -25,4 +27,7 @@ idf_component_register(
         esp_netif
         esp_timer
         esp_lcd
+        lvgl
 )
+
+# LVGL is included as local component in components/ directory

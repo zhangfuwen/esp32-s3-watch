@@ -12,12 +12,15 @@
 #include "esp_log.h"
 #include "esp_timer.h"
 #include "driver/gpio.h"
-#include "driver/i2c.h"
+#include "driver/spi_master.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
 #include "lvgl.h"
+#include "esp_lcd_panel_io.h"
 #include "esp_lcd_panel_ops.h"
+#include "esp_lcd_panel_vendor.h"
+#include "esp_lcd_types.h"
 
 static const char *TAG = "LVGL_PORT";
 
@@ -25,8 +28,8 @@ static const char *TAG = "LVGL_PORT";
 static esp_lcd_panel_io_handle_t panel_io = NULL;
 static esp_lcd_panel_handle_t panel = NULL;
 
-// LVGL display buffer
-#define LVGL_BUF_SIZE (DISPLAY_WIDTH * DISPLAY_HEIGHT / 4)
+// LVGL display buffer (smaller size for limited RAM)
+#define LVGL_BUF_SIZE (DISPLAY_WIDTH * 40)  // Smaller buffer
 static lv_disp_draw_buf_t disp_buf;
 static lv_color_t *buf1 = NULL;
 static lv_color_t *buf2 = NULL;
@@ -54,9 +57,9 @@ esp_err_t lvgl_display_init(void)
     
     // SPI bus
     const spi_bus_config_t buscfg = {
-        .miso_io_num = -1,
         .mosi_io_num = DISPLAY_MOSI_PIN,
         .sclk_io_num = DISPLAY_SCLK_PIN,
+        .miso_io_num = -1,
         .quadwp_io_num = -1,
         .quadhd_io_num = -1,
         .max_transfer_sz = DISPLAY_WIDTH * 20 * sizeof(uint16_t),
@@ -80,7 +83,7 @@ esp_err_t lvgl_display_init(void)
     // Panel
     const esp_lcd_panel_dev_config_t panel_config = {
         .reset_gpio_num = DISPLAY_RESET_PIN,
-        .rgb_ele_order = LCD_RGB_ELEMENT_ORDER_BGR,
+        .rgb_endian = LCD_RGB_ENDIAN_BGR,
         .bits_per_pixel = 16,
     };
     ESP_ERROR_CHECK(esp_lcd_new_panel_st7789(panel_io, &panel_config, &panel));
@@ -134,9 +137,18 @@ esp_err_t lvgl_init_system(void)
     // LVGL init
     lv_init();
     
-    // Allocate display buffers
-    buf1 = heap_caps_malloc(LVGL_BUF_SIZE * sizeof(lv_color_t), MALLOC_CAP_SPIRAM);
-    buf2 = heap_caps_malloc(LVGL_BUF_SIZE * sizeof(lv_color_t), MALLOC_CAP_SPIRAM);
+    // Allocate display buffers (try PSRAM first, fall back to DRAM)
+    buf1 = heap_caps_malloc(LVGL_BUF_SIZE * sizeof(lv_color_t), MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT);
+    if (!buf1) {
+        ESP_LOGW(TAG, "PSRAM not available, using DRAM for buf1");
+        buf1 = heap_caps_malloc(LVGL_BUF_SIZE * sizeof(lv_color_t), MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
+    }
+    
+    buf2 = heap_caps_malloc(LVGL_BUF_SIZE * sizeof(lv_color_t), MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT);
+    if (!buf2) {
+        ESP_LOGW(TAG, "PSRAM not available, using DRAM for buf2");
+        buf2 = heap_caps_malloc(LVGL_BUF_SIZE * sizeof(lv_color_t), MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
+    }
     
     if (!buf1 || !buf2) {
         ESP_LOGE(TAG, "Failed to allocate LVGL buffers!");

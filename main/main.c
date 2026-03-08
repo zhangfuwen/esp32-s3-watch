@@ -20,12 +20,24 @@
 #include "wifi.h"
 #include "bluetooth.h"
 #include "lvgl_port.h"
-
-#if CONFIG_LV_USE_LOG
 #include "lvgl.h"
-#endif
+#include "touch.h"
 
 static const char *TAG = "WATCH";
+
+// Touch callback
+static void touch_handler(touch_event_t event, uint8_t count)
+{
+    ESP_LOGI(TAG, ">>> TOUCH EVENT: %d, count: %d", event, count);
+    
+    if (event == TOUCH_EVENT_DOUBLE_TAP) {
+        ESP_LOGI(TAG, ">>> DOUBLE TAP - Toggle LVGL interface!");
+        // TODO: Toggle LVGL visibility
+    } else if (event == TOUCH_EVENT_PRESS) {
+        ESP_LOGI(TAG, ">>> TOUCH PRESS - Change display color!");
+        // TODO: Change color
+    }
+}
 
 /**
  * @brief Main application entry point
@@ -49,16 +61,28 @@ void app_main(void)
     // Initialize display with LVGL
     ESP_LOGI(TAG, "Initializing LVGL display...");
     display_init();  // Initialize hardware
-    lvgl_init_system();  // Initialize LVGL
-    lvgl_start_tasks();  // Start LVGL tasks
-    ESP_LOGI(TAG, "LVGL initialized!");
     
-    // TODO: Create LVGL UI after component download is fixed
-    // lv_obj_t *label = lv_label_create(lv_scr_act());
-    // lv_label_set_text(label, "ESP32-S3 Watch\nLVGL v0.3.0");
-    // lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
+    esp_err_t lvgl_ret = lvgl_init_system();  // Initialize LVGL
+    if (lvgl_ret == ESP_OK) {
+        lvgl_start_tasks();  // Start LVGL tasks
+        ESP_LOGI(TAG, "LVGL initialized!");
+        
+        // Create a simple LVGL test UI
+        lv_obj_t *label = lv_label_create(lv_scr_act());
+        lv_label_set_text(label, "ESP32-S3 Watch\nLVGL v0.3.1");
+        lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
+        lv_label_set_long_mode(label, LV_LABEL_LONG_WRAP);
+        lv_obj_set_width(label, DISPLAY_WIDTH - 20);
+        
+        ESP_LOGI(TAG, "LVGL test UI created");
+    } else {
+        ESP_LOGE(TAG, "LVGL init failed, display will show red test only");
+    }
     
-    ESP_LOGI(TAG, "Display ready (LVGL backend running)");
+    // Initialize touch
+    ESP_LOGI(TAG, "Initializing touch...");
+    touch_init();
+    touch_start_task(touch_handler);
     
     // Initialize input system (buttons/touch)
     ESP_LOGI(TAG, "Initializing input...");
@@ -77,7 +101,8 @@ void app_main(void)
     // watch_face_start();
     
     ESP_LOGI(TAG, "=== System Ready ===");
-    ESP_LOGI(TAG, "LVGL is running - UI should be visible");
+    ESP_LOGI(TAG, "Touch the BOOT button to test!");
+    ESP_LOGI(TAG, "Double tap to toggle LVGL interface");
     
     // Keep alive forever
     while (1) {

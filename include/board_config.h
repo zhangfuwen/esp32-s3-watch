@@ -36,7 +36,7 @@
 //==================== Buttons & Input ====================
 #define BUILTIN_LED_GPIO            GPIO_NUM_NC       // Not connected
 #define BOOT_BUTTON_GPIO            GPIO_NUM_0        // Boot button
-#define POWER_BUTTON_GPIO           GPIO_NUM_45       // Power button
+#define POWER_BUTTON_GPIO           GPIO_NUM_35       // Power button (changed from 45)
 #define VOLUME_UP_BUTTON_GPIO       GPIO_NUM_NC       // Not connected
 #define VOLUME_DOWN_BUTTON_GPIO     GPIO_NUM_NC       // Not connected
 
@@ -53,7 +53,7 @@
 #define DISPLAY_CS_PIN              GPIO_NUM_12
 #define DISPLAY_DC_PIN              GPIO_NUM_11
 #define DISPLAY_RESET_PIN           GPIO_NUM_NC       // Not connected
-#define DISPLAY_BACKLIGHT_PIN       GPIO_NUM_47
+#define DISPLAY_BACKLIGHT_PIN       GPIO_NUM_47  // Backlight control
 
 // Vibration Motor
 #define VIB_MOTOR_PIN               GPIO_NUM_4
