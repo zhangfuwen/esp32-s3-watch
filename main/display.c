@@ -103,13 +103,28 @@ esp_err_t display_init(void)
     gpio_set_level(DISPLAY_BACKLIGHT_PIN, 1);
     ESP_LOGI(TAG, "Backlight ON");
     
-    // Test RED
-    ESP_LOGI(TAG, "10. RED test...");
-    uint16_t red = 0xF800;
-    for (int y = 0; y < DISPLAY_HEIGHT; y += 10) {
-        esp_lcd_panel_draw_bitmap(panel, 0, y, DISPLAY_WIDTH, y + 10, &red);
+    // Test RED - allocate proper buffer
+    ESP_LOGI(TAG, "10. RED test (allocating buffer)...");
+    
+    // Allocate buffer for one row (240 pixels × 2 bytes = 480 bytes)
+    uint16_t *line_buffer = malloc(DISPLAY_WIDTH * sizeof(uint16_t));
+    if (!line_buffer) {
+        ESP_LOGE(TAG, "Failed to allocate line buffer!");
+        return ESP_ERR_NO_MEM;
     }
-    ESP_LOGI(TAG, "RED OK");
+    
+    // Fill with red color (RGB565: 0xF800)
+    for (int i = 0; i < DISPLAY_WIDTH; i++) {
+        line_buffer[i] = 0xF800;  // Red in RGB565
+    }
+    
+    // Draw line by line
+    for (int y = 0; y < DISPLAY_HEIGHT; y++) {
+        esp_lcd_panel_draw_bitmap(panel, 0, y, DISPLAY_WIDTH, y + 1, line_buffer);
+    }
+    
+    free(line_buffer);
+    ESP_LOGI(TAG, "RED OK - Screen should be solid red!");
     
     ESP_LOGI(TAG, "========================================");
     ESP_LOGI(TAG, "COMPLETE! Screen should be SOLID RED!");
