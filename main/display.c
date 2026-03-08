@@ -74,18 +74,23 @@ esp_err_t display_init(void)
     ESP_ERROR_CHECK(esp_lcd_panel_init(panel));
     ESP_LOGI(TAG, "Init OK");
     
+    // Set display offset (center 240x285 on 240x320 controller)
+    ESP_LOGI(TAG, "6. Set offset (%d, %d)...", DISPLAY_OFFSET_X, DISPLAY_OFFSET_Y);
+    ESP_ERROR_CHECK(esp_lcd_panel_set_gap(panel, DISPLAY_OFFSET_X, DISPLAY_OFFSET_Y));
+    ESP_LOGI(TAG, "Offset OK");
+    
     // Invert
-    ESP_LOGI(TAG, "6. Invert...");
+    ESP_LOGI(TAG, "7. Invert...");
     ESP_ERROR_CHECK(esp_lcd_panel_invert_color(panel, true));
     ESP_LOGI(TAG, "Invert OK");
     
     // Display ON
-    ESP_LOGI(TAG, "7. Display ON...");
+    ESP_LOGI(TAG, "8. Display ON...");
     ESP_ERROR_CHECK(esp_lcd_panel_disp_on_off(panel, true));
     ESP_LOGI(TAG, "Display ON OK");
     
     // Backlight
-    ESP_LOGI(TAG, "8. Backlight (GPIO %d)...", DISPLAY_BACKLIGHT_PIN);
+    ESP_LOGI(TAG, "9. Backlight (GPIO %d)...", DISPLAY_BACKLIGHT_PIN);
     gpio_config_t bl_conf = {
         .pin_bit_mask = (1ULL << DISPLAY_BACKLIGHT_PIN),
         .mode = GPIO_MODE_OUTPUT,
@@ -98,7 +103,7 @@ esp_err_t display_init(void)
     ESP_LOGI(TAG, "Backlight ON");
     
     // Test RED
-    ESP_LOGI(TAG, "9. RED test...");
+    ESP_LOGI(TAG, "10. RED test...");
     uint16_t red = 0xF800;
     for (int y = 0; y < DISPLAY_HEIGHT; y += 10) {
         esp_lcd_panel_draw_bitmap(panel, 0, y, DISPLAY_WIDTH, y + 10, &red);
@@ -106,7 +111,8 @@ esp_err_t display_init(void)
     ESP_LOGI(TAG, "RED OK");
     
     ESP_LOGI(TAG, "========================================");
-    ESP_LOGI(TAG, "COMPLETE! Screen should be RED!");
+    ESP_LOGI(TAG, "COMPLETE! Screen should be SOLID RED!");
+    ESP_LOGI(TAG, "Resolution: %dx%d, Offset: (%d,%d)", DISPLAY_WIDTH, DISPLAY_HEIGHT, DISPLAY_OFFSET_X, DISPLAY_OFFSET_Y);
     ESP_LOGI(TAG, "========================================");
     
     return ESP_OK;

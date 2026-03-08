@@ -60,7 +60,7 @@
 
 //==================== Display Parameters ====================
 #define DISPLAY_WIDTH               240
-#define DISPLAY_HEIGHT              284
+#define DISPLAY_HEIGHT              285
 
 // Display orientation and color settings
 #define DISPLAY_SWAP_XY             false
@@ -69,9 +69,9 @@
 #define DISPLAY_INVERT_COLOR        false
 #define DISPLAY_BACKLIGHT_OUTPUT_INVERT false
 
-// Display offset
+// Display offset - ST7789 controller defaults to 240x320, need to center 240x285
 #define DISPLAY_OFFSET_X            0
-#define DISPLAY_OFFSET_Y            0
+#define DISPLAY_OFFSET_Y            ((320 - 285) / 2)  // = 17, center vertically
 
 //==================== I2C Configuration ====================
 #define I2C_MASTER_NUM              I2C_NUM_0
