@@ -76,21 +76,22 @@ void app_main(void)
     watch_face_start();
     
     ESP_LOGI(TAG, "=== System Ready ===");
+    ESP_LOGI(TAG, "Display init complete - keeping RED screen for testing");
+    ESP_LOGI(TAG, "Screen should show SOLID RED from display_init()");
     
-    // Color cycle test loop - slower for debugging
+    // Keep display_init state - don't change colors
+    // Commented out color cycle for debugging
+    /*
     int color_index = 0;
     while (1) {
-        // Display test color
         display_fill(test_colors[color_index]);
-        ESP_LOGI(TAG, "========================================");
-        ESP_LOGI(TAG, "COLOR TEST: %s (0x%04X) - Screen should be this color!", color_names[color_index], test_colors[color_index]);
-        ESP_LOGI(TAG, "Heap: %lu bytes", esp_get_free_heap_size());
-        ESP_LOGI(TAG, "========================================");
-        
-        // Wait 3 seconds (slower for debugging)
         vTaskDelay(pdMS_TO_TICKS(3000));
-        
-        // Next color
         color_index = (color_index + 1) % 5;
+    }
+    */
+    
+    // Just idle forever to keep display_init state
+    while (1) {
+        vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }

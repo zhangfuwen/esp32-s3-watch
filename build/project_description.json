@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "esp32_s3_watch",
-    "project_version":    "b78000c-dirty",
+    "project_version":    "af7e4ad-dirty",
     "project_path":       "/home/admin/Code/esp32-s3-watch",
     "idf_path":           "/home/admin/esp-idf",
     "build_dir":          "/home/admin/Code/esp32-s3-watch/build",
@@ -528,14 +528,14 @@
             "target": "___idf_esp_psram",
             "prefix": "idf",
             "dir": "/home/admin/esp-idf/components/esp_psram",
-            "type": "CONFIG_ONLY",
+            "type": "LIBRARY",
             "lib": "__idf_esp_psram",
             "reqs": [],
             "priv_reqs": [ "heap", "spi_flash", "esp_mm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "file": "",
-            "sources": [],
+            "file": "/home/admin/Code/esp32-s3-watch/build/esp-idf/esp_psram/libesp_psram.a",
+            "sources": [ "/home/admin/esp-idf/components/esp_psram/esp_psram.c", "/home/admin/esp-idf/components/esp_psram/mmu_psram_flash.c", "/home/admin/esp-idf/components/esp_psram/esp32s3/esp_psram_impl_octal.c" ],
             "include_dirs": [ "include" ]
         },
         "esp_ringbuf": {

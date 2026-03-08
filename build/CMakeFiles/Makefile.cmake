@@ -463,6 +463,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/DependInfo.cmake"
   "esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/DependInfo.cmake"
   "esp-idf/esp_https_ota/CMakeFiles/__idf_esp_https_ota.dir/DependInfo.cmake"
+  "esp-idf/esp_psram/CMakeFiles/__idf_esp_psram.dir/DependInfo.cmake"
   "esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/DependInfo.cmake"
   "esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/DependInfo.cmake"
   "esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/DependInfo.cmake"

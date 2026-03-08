@@ -162,6 +162,7 @@ esp-idf/esp_system/ld/sections.ld: esp-idf/tcp_transport/libtcp_transport.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/esp_http_client/libesp_http_client.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/esp_http_server/libesp_http_server.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/esp_https_ota/libesp_https_ota.a
+esp-idf/esp_system/ld/sections.ld: esp-idf/esp_psram/libesp_psram.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/esp_lcd/libesp_lcd.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/protobuf-c/libprotobuf-c.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/protocomm/libprotocomm.a

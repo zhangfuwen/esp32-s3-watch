@@ -72,10 +72,10 @@ esp-idf/partition_table/CMakeFiles/partition_table_bin: partition_table/partitio
 partition_table/partition-table.bin: /home/admin/esp-idf/components/partition_table/partitions_singleapp.csv
 partition_table/partition-table.bin: /home/admin/esp-idf/components/partition_table/gen_esp32part.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/admin/Code/esp32-s3-watch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../partition_table/partition-table.bin"
-	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/partition_table && /home/admin/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/admin/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 2MB -- /home/admin/esp-idf/components/partition_table/partitions_singleapp.csv /home/admin/Code/esp32-s3-watch/build/partition_table/partition-table.bin
+	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/partition_table && /home/admin/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/admin/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 16MB -- /home/admin/esp-idf/components/partition_table/partitions_singleapp.csv /home/admin/Code/esp32-s3-watch/build/partition_table/partition-table.bin
 	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/partition_table && /usr/bin/cmake -E echo "Partition table binary generated. Contents:"
 	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/partition_table && /usr/bin/cmake -E echo "*******************************************************************************"
-	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/partition_table && /home/admin/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/admin/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 2MB -- /home/admin/Code/esp32-s3-watch/build/partition_table/partition-table.bin
+	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/partition_table && /home/admin/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/admin/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 16MB -- /home/admin/Code/esp32-s3-watch/build/partition_table/partition-table.bin
 	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/partition_table && /usr/bin/cmake -E echo "*******************************************************************************"
 
 partition_table_bin: esp-idf/partition_table/CMakeFiles/partition_table_bin

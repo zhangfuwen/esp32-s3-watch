@@ -47,6 +47,7 @@
 /home/admin/Code/esp32-s3-watch/build/esp-idf/esp_http_client/libesp_http_client.a
 /home/admin/Code/esp32-s3-watch/build/esp-idf/esp_http_server/libesp_http_server.a
 /home/admin/Code/esp32-s3-watch/build/esp-idf/esp_https_ota/libesp_https_ota.a
+/home/admin/Code/esp32-s3-watch/build/esp-idf/esp_psram/libesp_psram.a
 /home/admin/Code/esp32-s3-watch/build/esp-idf/esp_lcd/libesp_lcd.a
 /home/admin/Code/esp32-s3-watch/build/esp-idf/protobuf-c/libprotobuf-c.a
 /home/admin/Code/esp32-s3-watch/build/esp-idf/protocomm/libprotocomm.a

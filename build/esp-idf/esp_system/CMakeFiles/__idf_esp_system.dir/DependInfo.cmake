@@ -110,6 +110,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/admin/esp-idf/components/esp_gdbstub/include"
   "/home/admin/esp-idf/components/esp_app_format/include"
   "/home/admin/esp-idf/components/vfs/include"
+  "/home/admin/esp-idf/components/esp_psram/include"
   )
 
 # The set of dependency files which are needed:
