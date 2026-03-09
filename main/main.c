@@ -22,6 +22,7 @@
 #include "lvgl_port.h"
 #include "lvgl.h"
 #include "touch.h"
+#include "hw_test.h"
 
 static const char *TAG = "WATCH";
 
