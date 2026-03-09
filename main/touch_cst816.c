@@ -75,28 +75,28 @@ esp_err_t cst816_init(void)
     gpio_config(&int_conf);
     
     // Reset CST816
+    ESP_LOGI(TAG, "Resetting CST816...");
     gpio_set_level(TOUCH_RST_PIN, 0);
     vTaskDelay(pdMS_TO_TICKS(10));
     gpio_set_level(TOUCH_RST_PIN, 1);
-    vTaskDelay(pdMS_TO_TICKS(50));
+    vTaskDelay(pdMS_TO_TICKS(100));
     
     ESP_LOGI(TAG, "CST816 reset complete");
     
-    // Read chip ID
+    // Try to read chip ID (CST816 uses register 0xA7 for chip ID)
     uint8_t chip_id[2];
     esp_err_t ret = cst816_read_reg(0xA7, chip_id, 2);
     if (ret == ESP_OK) {
         ESP_LOGI(TAG, "CST816 Chip ID: 0x%02x%02x", chip_id[0], chip_id[1]);
         touch_handle.chip_id = (chip_id[0] << 8) | chip_id[1];
+        touch_handle.initialized = true;
+        ESP_LOGI(TAG, "CST816 initialized successfully");
+        return ESP_OK;
     } else {
         ESP_LOGE(TAG, "Failed to read CST816 chip ID: 0x%x", ret);
+        ESP_LOGW(TAG, "CST816 not detected, touch will not work");
         return ret;
     }
-    
-    touch_handle.initialized = true;
-    ESP_LOGI(TAG, "CST816 initialized successfully");
-    
-    return ESP_OK;
 }
 
 // Read touch coordinates

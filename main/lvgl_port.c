@@ -238,9 +238,12 @@ static void lvgl_indev_read_cb(lv_indev_drv_t *drv, lv_indev_data_t *data)
 {
     if (cst816_available && cst816_point.pressed) {
         data->state = LV_INDEV_STATE_PRESSED;
+        // Map CST816 coordinates to display coordinates
+        // CST816: 0-239 x, 0-284 y (matches our display)
         data->point.x = cst816_point.x;
         data->point.y = cst816_point.y;
-        ESP_LOGV(TAG, "LVGL touch: (%d, %d)", cst816_point.x, cst816_point.y);
+        ESP_LOGI(TAG, "LVGL touch: (%d, %d) -> (%d, %d)", 
+                 cst816_point.x, cst816_point.y, data->point.x, data->point.y);
     } else {
         data->state = LV_INDEV_STATE_RELEASED;
     }
