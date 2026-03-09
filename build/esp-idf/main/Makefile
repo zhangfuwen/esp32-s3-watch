@@ -415,6 +415,30 @@ touch.c.s:
 	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/touch.c.s
 .PHONY : touch.c.s
 
+touch_cst816.obj: touch_cst816.c.obj
+.PHONY : touch_cst816.obj
+
+# target to build an object file
+touch_cst816.c.obj:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/touch_cst816.c.obj
+.PHONY : touch_cst816.c.obj
+
+touch_cst816.i: touch_cst816.c.i
+.PHONY : touch_cst816.i
+
+# target to preprocess a source file
+touch_cst816.c.i:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/touch_cst816.c.i
+.PHONY : touch_cst816.c.i
+
+touch_cst816.s: touch_cst816.c.s
+.PHONY : touch_cst816.s
+
+# target to generate assembly for a file
+touch_cst816.c.s:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/touch_cst816.c.s
+.PHONY : touch_cst816.c.s
+
 watch_face.obj: watch_face.c.obj
 .PHONY : watch_face.obj
 
@@ -506,6 +530,9 @@ help:
 	@echo "... touch.obj"
 	@echo "... touch.i"
 	@echo "... touch.s"
+	@echo "... touch_cst816.obj"
+	@echo "... touch_cst816.i"
+	@echo "... touch_cst816.s"
 	@echo "... watch_face.obj"
 	@echo "... watch_face.i"
 	@echo "... watch_face.s"

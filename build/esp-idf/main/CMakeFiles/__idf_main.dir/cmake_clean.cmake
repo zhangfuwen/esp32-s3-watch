@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/__idf_main.dir/main.c.obj.d"
   "CMakeFiles/__idf_main.dir/touch.c.obj"
   "CMakeFiles/__idf_main.dir/touch.c.obj.d"
+  "CMakeFiles/__idf_main.dir/touch_cst816.c.obj"
+  "CMakeFiles/__idf_main.dir/touch_cst816.c.obj.d"
   "CMakeFiles/__idf_main.dir/watch_face.c.obj"
   "CMakeFiles/__idf_main.dir/watch_face.c.obj.d"
   "CMakeFiles/__idf_main.dir/wifi.c.obj"

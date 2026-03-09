@@ -21,13 +21,13 @@ extern "C" {
 #define TOUCH_I2C_NUM           I2C_NUM_0
 #define TOUCH_I2C_FREQ_HZ       400000
 
-// Touch event types
+// CST816 touch event types
 typedef enum {
-    TOUCH_EVENT_PRESS = 0,
-    TOUCH_EVENT_RELEASE,
-    TOUCH_EVENT_MOVE,
-    TOUCH_EVENT_GESTURE
-} touch_event_t;
+    CST816_EVENT_PRESS = 0,
+    CST816_EVENT_RELEASE,
+    CST816_EVENT_MOVE,
+    CST816_EVENT_GESTURE
+} cst816_event_t;
 
 // Touch point structure
 typedef struct {
@@ -35,17 +35,17 @@ typedef struct {
     uint16_t y;
     bool pressed;
     uint8_t gesture;
-} touch_point_t;
+} cst816_point_t;
 
 // Touch panel handle
 typedef struct {
     bool initialized;
     uint16_t chip_id;
     uint8_t firmware_version;
-} touch_panel_handle_t;
+} cst816_handle_t;
 
 // Touch callback function type
-typedef void (*touch_callback_t)(touch_event_t event, uint16_t x, uint16_t y);
+typedef void (*cst816_callback_t)(cst816_event_t event, uint16_t x, uint16_t y);
 
 /**
  * @brief Initialize CST816 touch panel
@@ -65,7 +65,7 @@ esp_err_t cst816_read_touch(touch_point_t *point);
  * @param callback Callback function for touch events
  * @return ESP_OK on success
  */
-esp_err_t cst816_start_task(touch_callback_t callback);
+esp_err_t cst816_start_task(cst816_callback_t callback);
 
 /**
  * @brief Get touch panel handle

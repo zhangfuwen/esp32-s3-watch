@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "esp32_s3_watch",
-    "project_version":    "v0.4.3-dirty",
+    "project_version":    "v0.5.0-dirty",
     "project_path":       "/home/admin/Code/esp32-s3-watch",
     "idf_path":           "/home/admin/esp-idf",
     "build_dir":          "/home/admin/Code/esp32-s3-watch/build",
@@ -820,7 +820,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/admin/Code/esp32-s3-watch/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/admin/Code/esp32-s3-watch/main/main.c", "/home/admin/Code/esp32-s3-watch/main/display.c", "/home/admin/Code/esp32-s3-watch/main/watch_face.c", "/home/admin/Code/esp32-s3-watch/main/input.c", "/home/admin/Code/esp32-s3-watch/main/wifi.c", "/home/admin/Code/esp32-s3-watch/main/bluetooth.c", "/home/admin/Code/esp32-s3-watch/main/lvgl_port.c", "/home/admin/Code/esp32-s3-watch/main/touch.c", "/home/admin/Code/esp32-s3-watch/main/hw_test.c", "/home/admin/Code/esp32-s3-watch/main/comfort/breathing.c", "/home/admin/Code/esp32-s3-watch/main/comfort/messages.c", "/home/admin/Code/esp32-s3-watch/main/comfort/emergency.c" ],
+            "sources": [ "/home/admin/Code/esp32-s3-watch/main/main.c", "/home/admin/Code/esp32-s3-watch/main/display.c", "/home/admin/Code/esp32-s3-watch/main/watch_face.c", "/home/admin/Code/esp32-s3-watch/main/input.c", "/home/admin/Code/esp32-s3-watch/main/wifi.c", "/home/admin/Code/esp32-s3-watch/main/bluetooth.c", "/home/admin/Code/esp32-s3-watch/main/lvgl_port.c", "/home/admin/Code/esp32-s3-watch/main/touch.c", "/home/admin/Code/esp32-s3-watch/main/touch_cst816.c", "/home/admin/Code/esp32-s3-watch/main/hw_test.c", "/home/admin/Code/esp32-s3-watch/main/comfort/breathing.c", "/home/admin/Code/esp32-s3-watch/main/comfort/messages.c", "/home/admin/Code/esp32-s3-watch/main/comfort/emergency.c" ],
             "include_dirs": [ "../include", "comfort" ]
         },
         "mbedtls": {

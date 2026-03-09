@@ -23,9 +23,9 @@ static const char *TAG = "CST816";
 #define CST816_REG_XY_COORD     0x03
 
 // Touch state
-static touch_panel_handle_t touch_handle = {0};
+static cst816_handle_t touch_handle = {0};
 static TaskHandle_t touch_task_handle = NULL;
-static touch_callback_t touch_cb = NULL;
+static cst816_callback_t touch_cb = NULL;
 
 // I2C read from CST816
 static esp_err_t cst816_read_reg(uint8_t reg, uint8_t *data, size_t len)
@@ -100,7 +100,7 @@ esp_err_t cst816_init(void)
 }
 
 // Read touch coordinates
-esp_err_t cst816_read_touch(touch_point_t *point)
+esp_err_t cst816_read_touch(cst816_point_t *point)
 {
     if (!touch_handle.initialized) {
         return ESP_ERR_INVALID_STATE;
@@ -154,7 +154,7 @@ static void IRAM_ATTR touch_isr_handler(void *arg)
 // Touch task - reads coordinates on interrupt
 static void touch_task(void *pvParameters)
 {
-    touch_point_t point;
+    cst816_point_t point;
     bool last_pressed = false;
     
     while (1) {
@@ -171,19 +171,19 @@ static void touch_task(void *pvParameters)
             if (point.pressed && !last_pressed) {
                 // New touch
                 if (touch_cb) {
-                    touch_cb(TOUCH_EVENT_PRESS, point.x, point.y);
+                    touch_cb(CST816_EVENT_PRESS, point.x, point.y);
                 }
                 ESP_LOGI(TAG, "Touch Press: (%d, %d)", point.x, point.y);
             } else if (!point.pressed && last_pressed) {
                 // Release
                 if (touch_cb) {
-                    touch_cb(TOUCH_EVENT_RELEASE, point.x, point.y);
+                    touch_cb(CST816_EVENT_RELEASE, point.x, point.y);
                 }
                 ESP_LOGI(TAG, "Touch Release");
             } else if (point.pressed && last_pressed) {
                 // Move
                 if (touch_cb) {
-                    touch_cb(TOUCH_EVENT_MOVE, point.x, point.y);
+                    touch_cb(CST816_EVENT_MOVE, point.x, point.y);
                 }
             }
             
@@ -197,7 +197,7 @@ static void touch_task(void *pvParameters)
 }
 
 // Start touch task
-esp_err_t cst816_start_task(touch_callback_t callback)
+esp_err_t cst816_start_task(cst816_callback_t callback)
 {
     touch_cb = callback;
     
@@ -214,7 +214,7 @@ esp_err_t cst816_start_task(touch_callback_t callback)
 }
 
 // Get touch handle
-touch_panel_handle_t* cst816_get_handle(void)
+cst816_handle_t* cst816_get_handle(void)
 {
     return &touch_handle;
 }

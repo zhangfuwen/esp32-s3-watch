@@ -226,31 +226,11 @@ esp_err_t lvgl_start_tasks(void)
     return ESP_OK;
 }
 
-// LVGL input device (indev) for touch/button
+// LVGL input device (indev) for touch
 static lv_indev_t *lvgl_indev = NULL;
-static lv_indev_data_t lvgl_indev_data;
-
-// Read callback for LVGL input device
-static void lvgl_indev_read_cb(lv_indev_drv_t *drv, lv_indev_data_t *data)
-{
-    static bool last_pressed = false;
-    
-    // Read button state (using BOOT button as touch substitute)
-    bool pressed = touch_is_pressed();
-    
-    if (pressed) {
-        data->state = LV_INDEV_STATE_PRESSED;
-        data->point.x = DISPLAY_WIDTH / 2;  // Center of screen
-        data->point.y = DISPLAY_HEIGHT / 2;
-    } else {
-        data->state = LV_INDEV_STATE_RELEASED;
-    }
-    
-    last_pressed = pressed;
-}
 
 // CST816 touch state for LVGL
-static touch_point_t cst816_point = {0};
+static cst816_point_t cst816_point = {0};
 static bool cst816_available = false;
 
 // Read callback for LVGL input device (CST816)
@@ -263,27 +243,26 @@ static void lvgl_indev_read_cb(lv_indev_drv_t *drv, lv_indev_data_t *data)
         ESP_LOGV(TAG, "LVGL touch: (%d, %d)", cst816_point.x, cst816_point.y);
     } else {
         data->state = LV_INDEV_STATE_RELEASED;
-        // Keep last position for drag detection
     }
 }
 
 // CST816 touch callback
-static void cst816_callback(touch_event_t event, uint16_t x, uint16_t y)
+static void cst816_callback(cst816_event_t event, uint16_t x, uint16_t y)
 {
     switch (event) {
-        case TOUCH_EVENT_PRESS:
+        case CST816_EVENT_PRESS:
             cst816_point.x = x;
             cst816_point.y = y;
             cst816_point.pressed = true;
             ESP_LOGI(TAG, "CST816 Press: (%d, %d)", x, y);
             break;
             
-        case TOUCH_EVENT_RELEASE:
+        case CST816_EVENT_RELEASE:
             cst816_point.pressed = false;
             ESP_LOGI(TAG, "CST816 Release");
             break;
             
-        case TOUCH_EVENT_MOVE:
+        case CST816_EVENT_MOVE:
             cst816_point.x = x;
             cst816_point.y = y;
             ESP_LOGV(TAG, "CST816 Move: (%d, %d)", x, y);
