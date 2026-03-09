@@ -21,6 +21,7 @@
 #include "esp_lcd_panel_ops.h"
 #include "esp_lcd_panel_vendor.h"
 #include "esp_lcd_types.h"
+#include "touch.h"
 
 static const char *TAG = "LVGL_PORT";
 
@@ -216,15 +217,59 @@ esp_err_t lvgl_start_tasks(void)
     // Create main task
     xTaskCreate(lvgl_main_task, "lvgl_main", 8192, NULL, 5, &lvgl_task_handle);
     
+    // Initialize touch input device
+    lvgl_touch_init();
+    
     ESP_LOGI(TAG, "LVGL tasks started");
     
     return ESP_OK;
 }
 
-// Initialize touch (placeholder for now)
+// LVGL input device (indev) for touch/button
+static lv_indev_t *lvgl_indev = NULL;
+static lv_indev_data_t lvgl_indev_data;
+
+// Read callback for LVGL input device
+static void lvgl_indev_read_cb(lv_indev_drv_t *drv, lv_indev_data_t *data)
+{
+    static bool last_pressed = false;
+    
+    // Read button state (using BOOT button as touch substitute)
+    bool pressed = touch_is_pressed();
+    
+    if (pressed) {
+        data->state = LV_INDEV_STATE_PRESSED;
+        data->point.x = DISPLAY_WIDTH / 2;  // Center of screen
+        data->point.y = DISPLAY_HEIGHT / 2;
+    } else {
+        data->state = LV_INDEV_STATE_RELEASED;
+    }
+    
+    last_pressed = pressed;
+}
+
+// Initialize touch for LVGL
 esp_err_t lvgl_touch_init(void)
 {
-    ESP_LOGI(TAG, "Touch init (placeholder)...");
-    // TODO: Add touch driver initialization
+    ESP_LOGI(TAG, "LVGL Touch Init...");
+    
+    // Initialize touch driver
+    touch_init();
+    
+    // Register input device with LVGL
+    static lv_indev_drv_t indev_drv;
+    lv_indev_drv_init(&indev_drv);
+    indev_drv.type = LV_INDEV_TYPE_POINTER;
+    indev_drv.read_cb = lvgl_indev_read_cb;
+    
+    lvgl_indev = lv_indev_drv_register(&indev_drv);
+    
+    if (lvgl_indev) {
+        ESP_LOGI(TAG, "LVGL touch input registered");
+    } else {
+        ESP_LOGE(TAG, "Failed to register LVGL touch input");
+        return ESP_FAIL;
+    }
+    
     return ESP_OK;
 }
