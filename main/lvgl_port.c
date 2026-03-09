@@ -83,7 +83,7 @@ esp_err_t lvgl_display_init(void)
     // Panel
     const esp_lcd_panel_dev_config_t panel_config = {
         .reset_gpio_num = DISPLAY_RESET_PIN,
-        .rgb_endian = LCD_RGB_ENDIAN_BGR,
+        .rgb_ele_order = LCD_RGB_ELEMENT_ORDER_BGR,
         .bits_per_pixel = 16,
     };
     ESP_ERROR_CHECK(esp_lcd_new_panel_st7789(panel_io, &panel_config, &panel));
@@ -133,6 +133,15 @@ esp_err_t lvgl_display_init(void)
 esp_err_t lvgl_init_system(void)
 {
     ESP_LOGI(TAG, "LVGL System Init...");
+    
+    // First initialize display hardware
+    ESP_LOGI(TAG, "Calling lvgl_display_init()...");
+    esp_err_t ret = lvgl_display_init();
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "lvgl_display_init() failed: 0x%x", ret);
+        return ret;
+    }
+    ESP_LOGI(TAG, "lvgl_display_init() SUCCESS!");
     
     // LVGL init
     lv_init();

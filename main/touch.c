@@ -115,7 +115,8 @@ esp_err_t touch_start_task(touch_callback_t callback)
 {
     touch_cb = callback;
     
-    xTaskCreate(touch_detect_task, "touch_detect", 2048, NULL, 5, NULL);
+    // Increased stack size to 4096 to prevent overflow
+    xTaskCreate(touch_detect_task, "touch_detect", 4096, NULL, 5, NULL);
     
     ESP_LOGI(TAG, "Touch detection task started");
     

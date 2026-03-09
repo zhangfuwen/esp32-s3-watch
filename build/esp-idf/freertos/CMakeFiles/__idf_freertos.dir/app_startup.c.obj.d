@@ -109,6 +109,4 @@ esp-idf/freertos/CMakeFiles/__idf_freertos.dir/app_startup.c.obj: \
  /home/admin/esp-idf/components/esp_system/include/esp_task_wdt.h \
  /home/admin/esp-idf/components/esp_system/include/esp_freertos_hooks.h \
  /home/admin/esp-idf/components/heap/include/esp_heap_caps_init.h \
- /home/admin/esp-idf/components/esp_hw_support/include/esp_chip_info.h \
- /home/admin/esp-idf/components/esp_psram/include/esp_psram.h \
- /home/admin/esp-idf/components/esp_psram/include/esp_private/esp_psram_extram.h
+ /home/admin/esp-idf/components/esp_hw_support/include/esp_chip_info.h

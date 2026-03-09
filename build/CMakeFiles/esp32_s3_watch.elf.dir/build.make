@@ -145,7 +145,6 @@ esp32_s3_watch.elf: esp-idf/tcp_transport/libtcp_transport.a
 esp32_s3_watch.elf: esp-idf/esp_http_client/libesp_http_client.a
 esp32_s3_watch.elf: esp-idf/esp_http_server/libesp_http_server.a
 esp32_s3_watch.elf: esp-idf/esp_https_ota/libesp_https_ota.a
-esp32_s3_watch.elf: esp-idf/esp_psram/libesp_psram.a
 esp32_s3_watch.elf: esp-idf/esp_lcd/libesp_lcd.a
 esp32_s3_watch.elf: esp-idf/protobuf-c/libprotobuf-c.a
 esp32_s3_watch.elf: esp-idf/protocomm/libprotocomm.a
@@ -162,6 +161,7 @@ esp32_s3_watch.elf: esp-idf/spiffs/libspiffs.a
 esp32_s3_watch.elf: esp-idf/touch_element/libtouch_element.a
 esp32_s3_watch.elf: esp-idf/usb/libusb.a
 esp32_s3_watch.elf: esp-idf/wifi_provisioning/libwifi_provisioning.a
+esp32_s3_watch.elf: esp-idf/lvgl/liblvgl.a
 esp32_s3_watch.elf: esp-idf/main/libmain.a
 esp32_s3_watch.elf: esp-idf/app_trace/libapp_trace.a
 esp32_s3_watch.elf: esp-idf/unity/libunity.a
@@ -172,6 +172,7 @@ esp32_s3_watch.elf: esp-idf/console/libconsole.a
 esp32_s3_watch.elf: esp-idf/protobuf-c/libprotobuf-c.a
 esp32_s3_watch.elf: esp-idf/json/libjson.a
 esp32_s3_watch.elf: esp-idf/esp_lcd/libesp_lcd.a
+esp32_s3_watch.elf: esp-idf/lvgl/liblvgl.a
 esp32_s3_watch.elf: esp-idf/xtensa/libxtensa.a
 esp32_s3_watch.elf: esp-idf/esp_ringbuf/libesp_ringbuf.a
 esp32_s3_watch.elf: esp-idf/efuse/libefuse.a
@@ -216,7 +217,6 @@ esp32_s3_watch.elf: esp-idf/tcp_transport/libtcp_transport.a
 esp32_s3_watch.elf: esp-idf/esp_http_client/libesp_http_client.a
 esp32_s3_watch.elf: esp-idf/esp_http_server/libesp_http_server.a
 esp32_s3_watch.elf: esp-idf/esp_https_ota/libesp_https_ota.a
-esp32_s3_watch.elf: esp-idf/esp_psram/libesp_psram.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedtls.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedx509.a
@@ -273,7 +273,6 @@ esp32_s3_watch.elf: esp-idf/tcp_transport/libtcp_transport.a
 esp32_s3_watch.elf: esp-idf/esp_http_client/libesp_http_client.a
 esp32_s3_watch.elf: esp-idf/esp_http_server/libesp_http_server.a
 esp32_s3_watch.elf: esp-idf/esp_https_ota/libesp_https_ota.a
-esp32_s3_watch.elf: esp-idf/esp_psram/libesp_psram.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedtls.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedx509.a
@@ -330,7 +329,6 @@ esp32_s3_watch.elf: esp-idf/tcp_transport/libtcp_transport.a
 esp32_s3_watch.elf: esp-idf/esp_http_client/libesp_http_client.a
 esp32_s3_watch.elf: esp-idf/esp_http_server/libesp_http_server.a
 esp32_s3_watch.elf: esp-idf/esp_https_ota/libesp_https_ota.a
-esp32_s3_watch.elf: esp-idf/esp_psram/libesp_psram.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedtls.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedx509.a
@@ -387,7 +385,6 @@ esp32_s3_watch.elf: esp-idf/tcp_transport/libtcp_transport.a
 esp32_s3_watch.elf: esp-idf/esp_http_client/libesp_http_client.a
 esp32_s3_watch.elf: esp-idf/esp_http_server/libesp_http_server.a
 esp32_s3_watch.elf: esp-idf/esp_https_ota/libesp_https_ota.a
-esp32_s3_watch.elf: esp-idf/esp_psram/libesp_psram.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedtls.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedx509.a
@@ -444,7 +441,6 @@ esp32_s3_watch.elf: esp-idf/tcp_transport/libtcp_transport.a
 esp32_s3_watch.elf: esp-idf/esp_http_client/libesp_http_client.a
 esp32_s3_watch.elf: esp-idf/esp_http_server/libesp_http_server.a
 esp32_s3_watch.elf: esp-idf/esp_https_ota/libesp_https_ota.a
-esp32_s3_watch.elf: esp-idf/esp_psram/libesp_psram.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedtls.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedx509.a
@@ -501,7 +497,6 @@ esp32_s3_watch.elf: esp-idf/tcp_transport/libtcp_transport.a
 esp32_s3_watch.elf: esp-idf/esp_http_client/libesp_http_client.a
 esp32_s3_watch.elf: esp-idf/esp_http_server/libesp_http_server.a
 esp32_s3_watch.elf: esp-idf/esp_https_ota/libesp_https_ota.a
-esp32_s3_watch.elf: esp-idf/esp_psram/libesp_psram.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedtls.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a
 esp32_s3_watch.elf: esp-idf/mbedtls/mbedtls/library/libmbedx509.a

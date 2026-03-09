@@ -419,6 +419,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/admin/Code/esp32-s3-watch/build/esp-idf/lvgl/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/admin/Code/esp32-s3-watch/build/esp-idf/main/cmake_install.cmake")
 endif()
 

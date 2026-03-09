@@ -1,9 +1,9 @@
 # Hashes of file build rules.
-fc9408bd5cd462022d9d6dd6a8dd2cb4 .bin_timestamp
+89e721f819a38d38c7f9373e0f38b8f8 .bin_timestamp
 a392bff871116037c6cea219ae741789 CMakeFiles/_project_elf_src
 a392bff871116037c6cea219ae741789 CMakeFiles/app
 f7c31c40052dc38dad1d4702180196e0 CMakeFiles/confserver
-278329ac3b24b7fbdcdc2c442544c2ed CMakeFiles/dfu
+785a4e26c26558ee762766fc67214c67 CMakeFiles/dfu
 997c1cb026be4cd67966cc7d7e77fb27 CMakeFiles/dfu-flash
 2636ac09dfaa56e21cebf0e169675afe CMakeFiles/dfu-list
 88aea31680351de7ec1b95cc50dca840 CMakeFiles/erase_flash

@@ -1442,14 +1442,6 @@ esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/cpu_start.c.obj: /home/a
   /home/admin/esp-idf/components/hal/include/hal/cache_types.h \
   /home/admin/esp-idf/components/esp_mm/include/esp_private/esp_mmu_map_private.h \
   /home/admin/esp-idf/components/hal/include/hal/mmu_types.h \
-  /home/admin/esp-idf/components/esp_psram/include/esp_psram.h \
-  /home/admin/esp-idf/components/esp_psram/include/esp_private/mmu_psram_flash.h \
-  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/param.h \
-  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/syslimits.h \
-  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/endian.h \
-  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_endian.h \
-  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/param.h \
-  /home/admin/esp-idf/components/esp_psram/include/esp_private/esp_psram_extram.h \
   /home/admin/esp-idf/components/spi_flash/include/esp_private/spi_flash_os.h \
   /home/admin/esp-idf/components/spi_flash/include/esp_flash.h \
   /home/admin/esp-idf/components/hal/include/hal/spi_flash_types.h \
@@ -1473,6 +1465,11 @@ esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/port/cpu_start.c.obj: /home/a
   /home/admin/esp-idf/components/soc/esp32s3/include/soc/spi_mem_struct.h \
   /home/admin/esp-idf/components/soc/esp32s3/include/soc/spi_mem_reg.h \
   /home/admin/esp-idf/components/hal/include/hal/spi_types.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/param.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/syslimits.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/endian.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_endian.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/param.h \
   /home/admin/esp-idf/components/hal/esp32s3/include/hal/spimem_flash_ll.h \
   /home/admin/esp-idf/components/hal/platform_port/include/hal/assert.h \
   /home/admin/esp-idf/components/spi_flash/include/spi_flash_override.h \
@@ -2581,8 +2578,6 @@ esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/startup.c.obj: /home/admin/es
   /home/admin/esp-idf/components/spi_flash/include/spi_flash_override.h \
   /home/admin/esp-idf/components/esp_system/port/include/private/esp_private/brownout.h \
   /home/admin/esp-idf/components/esp_rom/esp32s3/esp_rom_caps.h \
-  /home/admin/esp-idf/components/esp_psram/include/esp_psram.h \
-  /home/admin/esp-idf/components/esp_psram/include/esp_private/esp_psram_extram.h \
   /home/admin/esp-idf/components/esp_system/include/esp_private/startup_internal.h
 
 esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/system_time.c.obj: /home/admin/esp-idf/components/esp_system/system_time.c \
@@ -3238,12 +3233,6 @@ esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/xt_wdt.c.obj: /home/admin/esp
 
 /home/admin/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h:
 
-/home/admin/esp-idf/components/bootloader_support/include/esp_app_format.h:
-
-/home/admin/esp-idf/components/bootloader_support/include/esp_flash_partitions.h:
-
-/home/admin/esp-idf/components/bootloader_support/include/esp_image_format.h:
-
 /home/admin/esp-idf/components/hal/esp32s3/include/hal/mwdt_ll.h:
 
 /home/admin/esp-idf/components/bootloader_support/include/bootloader_mem.h:
@@ -3326,8 +3315,6 @@ config/sdkconfig.h:
 
 /home/admin/esp-idf/components/heap/include/esp_heap_caps.h:
 
-/home/admin/esp-idf/components/esp_psram/include/esp_private/esp_psram_extram.h:
-
 /home/admin/esp-idf/components/newlib/platform_include/esp_newlib.h:
 
 /home/admin/esp-idf/components/esp_common/include/esp_macros.h:
@@ -3375,6 +3362,8 @@ config/sdkconfig.h:
 /home/admin/esp-idf/components/driver/include/esp_private/spi_common_internal.h:
 
 /home/admin/esp-idf/components/xtensa/include/esp_cpu_utils.h:
+
+/home/admin/esp-idf/components/bootloader_support/include/esp_flash_partitions.h:
 
 /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/lock.h:
 
@@ -3556,8 +3545,6 @@ config/sdkconfig.h:
 
 /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/param.h:
 
-/home/admin/esp-idf/components/esp_psram/include/esp_psram.h:
-
 /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h:
 
 /home/admin/esp-idf/components/esp_system/port/arch/xtensa/debug_helpers.c:
@@ -3696,6 +3683,8 @@ config/sdkconfig.h:
 
 /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/setjmp.h:
 
+/home/admin/esp-idf/components/bootloader_support/include/esp_app_format.h:
+
 /home/admin/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h:
 
 /home/admin/esp-idf/components/esp_system/include/esp_system.h:
@@ -3822,8 +3811,6 @@ config/sdkconfig.h:
 
 /home/admin/esp-idf/components/esp_mm/include/esp_private/esp_mmu_map_private.h:
 
-/home/admin/esp-idf/components/esp_psram/include/esp_private/mmu_psram_flash.h:
-
 /home/admin/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c:
 
 /home/admin/esp-idf/components/esp_hw_support/include/esp_private/mspi_timing_tuning.h:
@@ -3831,3 +3818,5 @@ config/sdkconfig.h:
 /home/admin/esp-idf/components/xtensa/include/xtensa/xtruntime.h:
 
 /home/admin/esp-idf/components/bootloader_support/bootloader_flash/include/bootloader_flash_config.h:
+
+/home/admin/esp-idf/components/bootloader_support/include/esp_image_format.h:

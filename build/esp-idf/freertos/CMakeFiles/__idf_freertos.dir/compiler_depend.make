@@ -1021,9 +1021,7 @@ esp-idf/freertos/CMakeFiles/__idf_freertos.dir/app_startup.c.obj: /home/admin/es
   /home/admin/esp-idf/components/esp_system/include/esp_task_wdt.h \
   /home/admin/esp-idf/components/esp_system/include/esp_freertos_hooks.h \
   /home/admin/esp-idf/components/heap/include/esp_heap_caps_init.h \
-  /home/admin/esp-idf/components/esp_hw_support/include/esp_chip_info.h \
-  /home/admin/esp-idf/components/esp_psram/include/esp_psram.h \
-  /home/admin/esp-idf/components/esp_psram/include/esp_private/esp_psram_extram.h
+  /home/admin/esp-idf/components/esp_hw_support/include/esp_chip_info.h
 
 esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/freertos_compatibility.c.obj: /home/admin/esp-idf/components/freertos/esp_additions/freertos_compatibility.c \
   /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h \
@@ -1577,8 +1575,6 @@ esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port_systick.c.obj: /home/admin/e
 
 /home/admin/esp-idf/components/freertos/port_systick.c:
 
-/home/admin/esp-idf/components/freertos/port_common.c:
-
 /home/admin/esp-idf/components/esp_common/include/esp_bit_defs.h:
 
 /home/admin/esp-idf/components/esp_rom/include/esp_rom_sys.h:
@@ -1622,6 +1618,8 @@ esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port_systick.c.obj: /home/admin/e
 /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h:
 
 /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h:
+
+/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h:
 
 /home/admin/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h:
 
@@ -1680,10 +1678,6 @@ esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port_systick.c.obj: /home/admin/e
 /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:
 
 /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_types.h:
-
-/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h:
-
-/home/admin/esp-idf/components/esp_psram/include/esp_psram.h:
 
 /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/strings.h:
 
@@ -1751,6 +1745,8 @@ esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port_systick.c.obj: /home/admin/e
 
 /home/admin/esp-idf/components/soc/esp32s3/include/soc/soc.h:
 
+/home/admin/esp-idf/components/heap/include/esp_heap_caps.h:
+
 /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/stack_macros.h:
 
 /home/admin/esp-idf/components/esp_common/include/esp_err.h:
@@ -1771,12 +1767,6 @@ esp-idf/freertos/CMakeFiles/__idf_freertos.dir/port_systick.c.obj: /home/admin/e
 
 /home/admin/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:
 
-/home/admin/esp-idf/components/freertos/heap_idf.c:
-
-config/sdkconfig.h:
-
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/message_buffer.h:
-
 /home/admin/esp-idf/components/freertos/esp_additions/idf_additions.c:
 
 /home/admin/esp-idf/components/xtensa/include/xtensa_config.h:
@@ -1792,6 +1782,8 @@ config/sdkconfig.h:
 /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/semphr.h:
 
 /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/timers.h:
+
+/home/admin/esp-idf/components/freertos/port_common.c:
 
 /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/list.c:
 
@@ -1833,8 +1825,10 @@ config/sdkconfig.h:
 
 /home/admin/esp-idf/components/freertos/app_startup.c:
 
-/home/admin/esp-idf/components/heap/include/esp_heap_caps.h:
-
-/home/admin/esp-idf/components/esp_psram/include/esp_private/esp_psram_extram.h:
-
 /home/admin/esp-idf/components/freertos/esp_additions/freertos_compatibility.c:
+
+config/sdkconfig.h:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/message_buffer.h:
+
+/home/admin/esp-idf/components/freertos/heap_idf.c:

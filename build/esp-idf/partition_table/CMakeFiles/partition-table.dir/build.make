@@ -69,7 +69,7 @@ include esp-idf/partition_table/CMakeFiles/partition-table.dir/progress.make
 esp-idf/partition_table/CMakeFiles/partition-table:
 	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/partition_table && /usr/bin/cmake -E echo "Partition table binary generated. Contents:"
 	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/partition_table && /usr/bin/cmake -E echo "*******************************************************************************"
-	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/partition_table && /home/admin/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/admin/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 16MB -- /home/admin/Code/esp32-s3-watch/build/partition_table/partition-table.bin
+	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/partition_table && /home/admin/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/admin/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 2MB -- /home/admin/Code/esp32-s3-watch/build/partition_table/partition-table.bin
 	cd /home/admin/Code/esp32-s3-watch/build/esp-idf/partition_table && /usr/bin/cmake -E echo "*******************************************************************************"
 
 partition-table: esp-idf/partition_table/CMakeFiles/partition-table

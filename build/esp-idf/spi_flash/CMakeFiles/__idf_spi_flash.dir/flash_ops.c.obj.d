@@ -160,5 +160,4 @@ esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/flash_ops.c.obj: \
  /home/admin/esp-idf/components/bootloader_support/bootloader_flash/include/bootloader_flash_config.h \
  /home/admin/esp-idf/components/bootloader_support/include/esp_image_format.h \
  /home/admin/esp-idf/components/bootloader_support/include/esp_app_format.h \
- /home/admin/esp-idf/components/esp_rom/include/esp_rom_efuse.h \
- /home/admin/esp-idf/components/esp_psram/include/esp_private/esp_psram_io.h
+ /home/admin/esp-idf/components/esp_rom/include/esp_rom_efuse.h

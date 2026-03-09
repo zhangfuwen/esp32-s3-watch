@@ -941,8 +941,7 @@ esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.obj: /home/admin/
   /home/admin/esp-idf/components/esp_coex/include/esp_coexist.h \
   /home/admin/esp-idf/components/esp_coex/include/private/esp_coexist_adapter.h \
   /home/admin/esp-idf/components/esp_phy/include/esp_phy_init.h \
-  /home/admin/esp-idf/components/esp_phy/include/esp_private/phy.h \
-  /home/admin/esp-idf/components/esp_psram/include/esp_psram.h
+  /home/admin/esp-idf/components/esp_phy/include/esp_private/phy.h
 
 esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_netif.c.obj: /home/admin/esp-idf/components/esp_wifi/src/wifi_netif.c \
   /home/admin/esp-idf/components/esp_wifi/include/esp_wifi.h \
@@ -1376,8 +1375,6 @@ esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_netif.c.obj: /home/admin
 /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/mpu_wrappers.h:
 
 /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_pthreadtypes.h:
-
-/home/admin/esp-idf/components/esp_psram/include/esp_psram.h:
 
 /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h:
 

@@ -319,6 +319,30 @@ input.c.s:
 	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/input.c.s
 .PHONY : input.c.s
 
+lvgl_port.obj: lvgl_port.c.obj
+.PHONY : lvgl_port.obj
+
+# target to build an object file
+lvgl_port.c.obj:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port.c.obj
+.PHONY : lvgl_port.c.obj
+
+lvgl_port.i: lvgl_port.c.i
+.PHONY : lvgl_port.i
+
+# target to preprocess a source file
+lvgl_port.c.i:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port.c.i
+.PHONY : lvgl_port.c.i
+
+lvgl_port.s: lvgl_port.c.s
+.PHONY : lvgl_port.s
+
+# target to generate assembly for a file
+lvgl_port.c.s:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port.c.s
+.PHONY : lvgl_port.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -342,6 +366,30 @@ main.s: main.c.s
 main.c.s:
 	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/main.c.s
 .PHONY : main.c.s
+
+touch.obj: touch.c.obj
+.PHONY : touch.obj
+
+# target to build an object file
+touch.c.obj:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/touch.c.obj
+.PHONY : touch.c.obj
+
+touch.i: touch.c.i
+.PHONY : touch.i
+
+# target to preprocess a source file
+touch.c.i:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/touch.c.i
+.PHONY : touch.c.i
+
+touch.s: touch.c.s
+.PHONY : touch.s
+
+# target to generate assembly for a file
+touch.c.s:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/touch.c.s
+.PHONY : touch.c.s
 
 watch_face.obj: watch_face.c.obj
 .PHONY : watch_face.obj
@@ -422,9 +470,15 @@ help:
 	@echo "... input.obj"
 	@echo "... input.i"
 	@echo "... input.s"
+	@echo "... lvgl_port.obj"
+	@echo "... lvgl_port.i"
+	@echo "... lvgl_port.s"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... touch.obj"
+	@echo "... touch.i"
+	@echo "... touch.s"
 	@echo "... watch_face.obj"
 	@echo "... watch_face.i"
 	@echo "... watch_face.s"

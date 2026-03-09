@@ -25,17 +25,73 @@
 
 static const char *TAG = "WATCH";
 
+// LVGL state
+static bool lvgl_initialized = false;
+static bool lvgl_visible = false;
+
+// Forward declaration
+static void start_lvgl_ui(void);
+
 // Touch callback
 static void touch_handler(touch_event_t event, uint8_t count)
 {
+    ESP_LOGI(TAG, "=================================");
     ESP_LOGI(TAG, ">>> TOUCH EVENT: %d, count: %d", event, count);
+    ESP_LOGI(TAG, "=================================");
     
-    if (event == TOUCH_EVENT_DOUBLE_TAP) {
-        ESP_LOGI(TAG, ">>> DOUBLE TAP - Toggle LVGL interface!");
-        // TODO: Toggle LVGL visibility
+    if (event == TOUCH_EVENT_SINGLE_TAP) {
+        ESP_LOGI(TAG, ">>> SINGLE TAP DETECTED!");
+        if (!lvgl_initialized) {
+            ESP_LOGI(TAG, ">>> Starting LVGL for the first time...");
+            start_lvgl_ui();
+        } else {
+            ESP_LOGI(TAG, ">>> LVGL already running!");
+        }
+    } else if (event == TOUCH_EVENT_DOUBLE_TAP) {
+        ESP_LOGI(TAG, ">>> DOUBLE TAP DETECTED!");
+        // TODO: Toggle visibility or other action
     } else if (event == TOUCH_EVENT_PRESS) {
-        ESP_LOGI(TAG, ">>> TOUCH PRESS - Change display color!");
-        // TODO: Change color
+        ESP_LOGI(TAG, ">>> TOUCH PRESS (count=%d)", count);
+    }
+}
+
+// Start LVGL UI
+static void start_lvgl_ui(void)
+{
+    ESP_LOGI(TAG, "=== LVGL UI Start ===");
+    
+    if (lvgl_initialized) {
+        ESP_LOGW(TAG, "LVGL already initialized!");
+        return;
+    }
+    
+    // Initialize LVGL system
+    ESP_LOGI(TAG, "Calling lvgl_init_system()...");
+    esp_err_t ret = lvgl_init_system();
+    
+    if (ret == ESP_OK) {
+        ESP_LOGI(TAG, "✓ lvgl_init_system() SUCCESS!");
+        lvgl_initialized = true;
+        
+        // Start LVGL task
+        ESP_LOGI(TAG, "Calling lvgl_start_tasks()...");
+        lvgl_start_tasks();
+        ESP_LOGI(TAG, "✓ LVGL tasks started!");
+        
+        // Create UI elements
+        ESP_LOGI(TAG, "Creating LVGL label...");
+        lv_obj_t *label = lv_label_create(lv_scr_act());
+        lv_label_set_text(label, "ESP32-S3 Watch\nLVGL v0.3.1\nDouble tap to toggle!");
+        lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
+        lv_label_set_long_mode(label, LV_LABEL_LONG_WRAP);
+        lv_obj_set_width(label, DISPLAY_WIDTH - 20);
+        ESP_LOGI(TAG, "✓ LVGL label created!");
+        
+        lvgl_visible = true;
+        ESP_LOGI(TAG, "=== LVGL UI Ready ===");
+    } else {
+        ESP_LOGE(TAG, "✗ lvgl_init_system() FAILED! Error: 0x%x", ret);
+        ESP_LOGE(TAG, "Display will show red test only");
     }
 }
 
@@ -58,26 +114,9 @@ void app_main(void)
     ESP_ERROR_CHECK(ret);
     ESP_LOGI(TAG, "NVS initialized");
 
-    // Initialize display with LVGL
-    ESP_LOGI(TAG, "Initializing LVGL display...");
-    display_init();  // Initialize hardware
-    
-    esp_err_t lvgl_ret = lvgl_init_system();  // Initialize LVGL
-    if (lvgl_ret == ESP_OK) {
-        lvgl_start_tasks();  // Start LVGL tasks
-        ESP_LOGI(TAG, "LVGL initialized!");
-        
-        // Create a simple LVGL test UI
-        lv_obj_t *label = lv_label_create(lv_scr_act());
-        lv_label_set_text(label, "ESP32-S3 Watch\nLVGL v0.3.1");
-        lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
-        lv_label_set_long_mode(label, LV_LABEL_LONG_WRAP);
-        lv_obj_set_width(label, DISPLAY_WIDTH - 20);
-        
-        ESP_LOGI(TAG, "LVGL test UI created");
-    } else {
-        ESP_LOGE(TAG, "LVGL init failed, display will show red test only");
-    }
+    // Display will be initialized by LVGL when BOOT button is pressed
+    ESP_LOGI(TAG, "Display will be initialized by LVGL on first touch");
+    ESP_LOGI(TAG, "Press BOOT button to start LVGL");
     
     // Initialize touch
     ESP_LOGI(TAG, "Initializing touch...");

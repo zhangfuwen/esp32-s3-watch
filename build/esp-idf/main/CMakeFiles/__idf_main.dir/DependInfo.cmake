@@ -14,7 +14,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/admin/Code/esp32-s3-watch/main/comfort/messages.c" "esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.obj.d"
   "/home/admin/Code/esp32-s3-watch/main/display.c" "esp-idf/main/CMakeFiles/__idf_main.dir/display.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/display.c.obj.d"
   "/home/admin/Code/esp32-s3-watch/main/input.c" "esp-idf/main/CMakeFiles/__idf_main.dir/input.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/input.c.obj.d"
+  "/home/admin/Code/esp32-s3-watch/main/lvgl_port.c" "esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port.c.obj.d"
   "/home/admin/Code/esp32-s3-watch/main/main.c" "esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj.d"
+  "/home/admin/Code/esp32-s3-watch/main/touch.c" "esp-idf/main/CMakeFiles/__idf_main.dir/touch.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/touch.c.obj.d"
   "/home/admin/Code/esp32-s3-watch/main/watch_face.c" "esp-idf/main/CMakeFiles/__idf_main.dir/watch_face.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/watch_face.c.obj.d"
   "/home/admin/Code/esp32-s3-watch/main/wifi.c" "esp-idf/main/CMakeFiles/__idf_main.dir/wifi.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/wifi.c.obj.d"
   )

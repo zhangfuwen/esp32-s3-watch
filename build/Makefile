@@ -1423,19 +1423,6 @@ __idf_esp_https_ota/fast:
 .PHONY : __idf_esp_https_ota/fast
 
 #=============================================================================
-# Target rules for targets named __idf_esp_psram
-
-# Build rule for target.
-__idf_esp_psram: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 __idf_esp_psram
-.PHONY : __idf_esp_psram
-
-# fast build rule for target.
-__idf_esp_psram/fast:
-	$(MAKE) $(MAKESILENT) -f esp-idf/esp_psram/CMakeFiles/__idf_esp_psram.dir/build.make esp-idf/esp_psram/CMakeFiles/__idf_esp_psram.dir/build
-.PHONY : __idf_esp_psram/fast
-
-#=============================================================================
 # Target rules for targets named __idf_esp_lcd
 
 # Build rule for target.
@@ -1644,6 +1631,19 @@ __idf_wifi_provisioning/fast:
 .PHONY : __idf_wifi_provisioning/fast
 
 #=============================================================================
+# Target rules for targets named __idf_lvgl
+
+# Build rule for target.
+__idf_lvgl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 __idf_lvgl
+.PHONY : __idf_lvgl
+
+# fast build rule for target.
+__idf_lvgl/fast:
+	$(MAKE) $(MAKESILENT) -f esp-idf/lvgl/CMakeFiles/__idf_lvgl.dir/build.make esp-idf/lvgl/CMakeFiles/__idf_lvgl.dir/build
+.PHONY : __idf_lvgl/fast
+
+#=============================================================================
 # Target rules for targets named __idf_main
 
 # Build rule for target.
@@ -1763,7 +1763,6 @@ help:
 	@echo "... __idf_esp_partition"
 	@echo "... __idf_esp_phy"
 	@echo "... __idf_esp_pm"
-	@echo "... __idf_esp_psram"
 	@echo "... __idf_esp_ringbuf"
 	@echo "... __idf_esp_rom"
 	@echo "... __idf_esp_system"
@@ -1777,6 +1776,7 @@ help:
 	@echo "... __idf_http_parser"
 	@echo "... __idf_json"
 	@echo "... __idf_log"
+	@echo "... __idf_lvgl"
 	@echo "... __idf_lwip"
 	@echo "... __idf_main"
 	@echo "... __idf_mbedtls"

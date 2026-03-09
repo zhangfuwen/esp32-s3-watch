@@ -1178,13 +1178,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_memory_utils.c.ob
   /home/admin/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
   /home/admin/esp-idf/components/soc/esp32s3/include/soc/mpu_caps.h \
   /home/admin/esp-idf/components/esp_common/include/esp_attr.h \
-  /home/admin/esp-idf/components/esp_hw_support/include/esp_memory_utils.h \
-  /home/admin/esp-idf/components/esp_psram/include/esp_private/esp_psram_extram.h \
-  /home/admin/esp-idf/components/esp_common/include/esp_err.h \
-  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdio.h \
-  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdarg.h \
-  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/stdio.h \
-  /home/admin/esp-idf/components/esp_common/include/esp_compiler.h
+  /home/admin/esp-idf/components/esp_hw_support/include/esp_memory_utils.h
 
 esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/hw_random.c.obj: /home/admin/esp-idf/components/esp_hw_support/hw_random.c \
   /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdint.h \
@@ -4143,8 +4137,6 @@ config/sdkconfig.h:
 /home/admin/esp-idf/components/esp_pm/include/esp_private/pm_impl.h:
 
 /home/admin/esp-idf/components/esp_common/include/esp_err.h:
-
-/home/admin/esp-idf/components/esp_psram/include/esp_private/esp_psram_extram.h:
 
 /home/admin/esp-idf/components/newlib/platform_include/esp_newlib.h:
 

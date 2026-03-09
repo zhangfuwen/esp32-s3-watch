@@ -27,6 +27,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "flash_args"
   "flash_args.in"
   "ldgen_libraries.in"
+  "/home/admin/Code/esp32-s3-watch/components/lvgl/CMakeLists.txt"
+  "/home/admin/Code/esp32-s3-watch/components/lvgl/env_support/cmake/esp.cmake"
+  "/home/admin/Code/esp32-s3-watch/components/lvgl/idf_component.yml"
   "/home/admin/Code/esp32-s3-watch/main/CMakeLists.txt"
   "/home/admin/Code/esp32-s3-watch/main/idf_component.yml"
   "/home/admin/Code/esp32-s3-watch/sdkconfig"
@@ -361,6 +364,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "esp-idf/ulp/CMakeFiles/CMakeDirectoryInformation.cmake"
   "esp-idf/usb/CMakeFiles/CMakeDirectoryInformation.cmake"
   "esp-idf/wifi_provisioning/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "esp-idf/lvgl/CMakeFiles/CMakeDirectoryInformation.cmake"
   "esp-idf/main/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -463,7 +467,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/DependInfo.cmake"
   "esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/DependInfo.cmake"
   "esp-idf/esp_https_ota/CMakeFiles/__idf_esp_https_ota.dir/DependInfo.cmake"
-  "esp-idf/esp_psram/CMakeFiles/__idf_esp_psram.dir/DependInfo.cmake"
   "esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/DependInfo.cmake"
   "esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/DependInfo.cmake"
   "esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/DependInfo.cmake"
@@ -480,5 +483,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "esp-idf/touch_element/CMakeFiles/__idf_touch_element.dir/DependInfo.cmake"
   "esp-idf/usb/CMakeFiles/__idf_usb.dir/DependInfo.cmake"
   "esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/DependInfo.cmake"
+  "esp-idf/lvgl/CMakeFiles/__idf_lvgl.dir/DependInfo.cmake"
   "esp-idf/main/CMakeFiles/__idf_main.dir/DependInfo.cmake"
   )

@@ -497,7 +497,6 @@
 /home/admin/Code/esp32-s3-watch/build/esp-idf/esp_https_server/CMakeFiles/install.dir
 /home/admin/Code/esp32-s3-watch/build/esp-idf/esp_https_server/CMakeFiles/install/local.dir
 /home/admin/Code/esp32-s3-watch/build/esp-idf/esp_https_server/CMakeFiles/install/strip.dir
-/home/admin/Code/esp32-s3-watch/build/esp-idf/esp_psram/CMakeFiles/__idf_esp_psram.dir
 /home/admin/Code/esp32-s3-watch/build/esp-idf/esp_psram/CMakeFiles/edit_cache.dir
 /home/admin/Code/esp32-s3-watch/build/esp-idf/esp_psram/CMakeFiles/rebuild_cache.dir
 /home/admin/Code/esp32-s3-watch/build/esp-idf/esp_psram/CMakeFiles/list_install_components.dir
@@ -640,6 +639,13 @@
 /home/admin/Code/esp32-s3-watch/build/esp-idf/wifi_provisioning/CMakeFiles/install.dir
 /home/admin/Code/esp32-s3-watch/build/esp-idf/wifi_provisioning/CMakeFiles/install/local.dir
 /home/admin/Code/esp32-s3-watch/build/esp-idf/wifi_provisioning/CMakeFiles/install/strip.dir
+/home/admin/Code/esp32-s3-watch/build/esp-idf/lvgl/CMakeFiles/__idf_lvgl.dir
+/home/admin/Code/esp32-s3-watch/build/esp-idf/lvgl/CMakeFiles/edit_cache.dir
+/home/admin/Code/esp32-s3-watch/build/esp-idf/lvgl/CMakeFiles/rebuild_cache.dir
+/home/admin/Code/esp32-s3-watch/build/esp-idf/lvgl/CMakeFiles/list_install_components.dir
+/home/admin/Code/esp32-s3-watch/build/esp-idf/lvgl/CMakeFiles/install.dir
+/home/admin/Code/esp32-s3-watch/build/esp-idf/lvgl/CMakeFiles/install/local.dir
+/home/admin/Code/esp32-s3-watch/build/esp-idf/lvgl/CMakeFiles/install/strip.dir
 /home/admin/Code/esp32-s3-watch/build/esp-idf/main/CMakeFiles/__idf_main.dir
 /home/admin/Code/esp32-s3-watch/build/esp-idf/main/CMakeFiles/edit_cache.dir
 /home/admin/Code/esp32-s3-watch/build/esp-idf/main/CMakeFiles/rebuild_cache.dir

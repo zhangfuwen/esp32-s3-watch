@@ -143,5 +143,4 @@ esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.obj: \
  /home/admin/esp-idf/components/esp_coex/include/esp_coexist.h \
  /home/admin/esp-idf/components/esp_coex/include/private/esp_coexist_adapter.h \
  /home/admin/esp-idf/components/esp_phy/include/esp_phy_init.h \
- /home/admin/esp-idf/components/esp_phy/include/esp_private/phy.h \
- /home/admin/esp-idf/components/esp_psram/include/esp_psram.h
+ /home/admin/esp-idf/components/esp_phy/include/esp_private/phy.h

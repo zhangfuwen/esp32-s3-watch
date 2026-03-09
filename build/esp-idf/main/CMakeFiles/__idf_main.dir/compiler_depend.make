@@ -497,6 +497,359 @@ esp-idf/main/CMakeFiles/__idf_main.dir/input.c.obj: /home/admin/Code/esp32-s3-wa
   /home/admin/esp-idf/components/log/include/esp_log_internal.h \
   /home/admin/esp-idf/components/esp_common/include/esp_attr.h
 
+esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port.c.obj: /home/admin/Code/esp32-s3-watch/main/lvgl_port.c \
+  /home/admin/Code/esp32-s3-watch/main/lvgl_port.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_err.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdint.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdint.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_default_types.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/features.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/_newlib_version.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_intsup.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_stdint.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdio.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/_ansi.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/newlib.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/config.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/ieeefp.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/cdefs.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stddef.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdarg.h \
+  /home/admin/esp-idf/components/newlib/platform_include/sys/reent.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/reent.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/_ansi.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_types.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_types.h \
+  /home/admin/esp-idf/components/newlib/platform_include/sys/lock.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/lock.h \
+  /home/admin/esp-idf/components/newlib/platform_include/assert.h \
+  config/sdkconfig.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdlib.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/stdlib.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/alloca.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_locale.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/assert.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/stdio.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_compiler.h \
+  /home/admin/Code/esp32-s3-watch/include/board_config.h \
+  /home/admin/esp-idf/components/driver/gpio/include/driver/gpio.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdbool.h \
+  /home/admin/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h \
+  /home/admin/esp-idf/components/esp_hw_support/include/esp_intr_types.h \
+  /home/admin/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/admin/esp-idf/components/soc/esp32s3/include/soc/mpu_caps.h \
+  /home/admin/esp-idf/components/hal/include/hal/gpio_types.h \
+  /home/admin/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_bit_defs.h \
+  /home/admin/esp-idf/components/esp_rom/include/esp_rom_gpio.h \
+  /home/admin/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h \
+  /home/admin/esp-idf/components/driver/gpio/include/driver/gpio_etm.h \
+  /home/admin/esp-idf/components/esp_hw_support/include/esp_etm.h \
+  /home/admin/esp-idf/components/log/include/esp_log.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/inttypes.h \
+  /home/admin/esp-idf/components/esp_rom/include/esp_rom_sys.h \
+  /home/admin/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/admin/esp-idf/components/log/include/esp_log_internal.h \
+  /home/admin/esp-idf/components/esp_timer/include/esp_timer.h \
+  /home/admin/esp-idf/components/driver/spi/include/driver/spi_master.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h \
+  /home/admin/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
+  /home/admin/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa_config.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa/hal.h \
+  /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h \
+  /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa_context.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa/corebits.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/projdefs.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/deprecated_definitions.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
+  /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/specreg.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h \
+  /home/admin/esp-idf/components/xtensa/include/xt_instr_macros.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
+  /home/admin/esp-idf/components/esp_hw_support/include/spinlock.h \
+  /home/admin/esp-idf/components/esp_hw_support/include/esp_cpu.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa_api.h \
+  /home/admin/esp-idf/components/xtensa/include/xt_utils.h \
+  /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_attr.h \
+  /home/admin/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_macros.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_assert.h \
+  /home/admin/esp-idf/components/esp_hw_support/include/esp_memory_utils.h \
+  /home/admin/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_assert.h \
+  /home/admin/esp-idf/components/soc/esp32s3/include/soc/reg_base.h \
+  /home/admin/esp-idf/components/newlib/platform_include/esp_newlib.h \
+  /home/admin/esp-idf/components/heap/include/esp_heap_caps.h \
+  /home/admin/esp-idf/components/heap/include/multi_heap.h \
+  /home/admin/esp-idf/components/esp_system/include/esp_system.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_idf_version.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portbenchmark.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/limits.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/syslimits.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/limits.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/syslimits.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/mpu_wrappers.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/reent.h \
+  /home/admin/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/semphr.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/stream_buffer.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/message_buffer.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/stream_buffer.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/event_groups.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/timers.h \
+  /home/admin/esp-idf/components/hal/include/hal/spi_types.h \
+  /home/admin/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h \
+  /home/admin/esp-idf/components/driver/spi/include/driver/spi_common.h \
+  /home/admin/esp-idf/components/esp_system/include/esp_ipc.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_log.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_kconfig.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_types.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_timer.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal_tick.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_math.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_mem.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/string.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/strings.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/string.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_async.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_anim_timeline.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_anim.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_printf.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal_disp.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_style.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_font.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_symbol_def.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_area.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_color.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_assert.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_log.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_mem.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_math.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_types.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_area.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_anim.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_txt.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_printf.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_bidi.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_style_gen.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_txt.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_img_decoder.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_img_buf.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_color.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_area.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_fs.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_types.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_img_cache.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_rect.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/sw/lv_draw_sw_gradient.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_color.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_style.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/sw/lv_draw_sw_dither.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_pos.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_area.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_label.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_bidi.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_img.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_line.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_triangle.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_arc.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_mask.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_math.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_transform.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_layer.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_color.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_area.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_ll.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_timer.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal_indev.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal_tick.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_style.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_types.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_area.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_color.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_assert.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_tree.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_pos.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_scroll.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_anim.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_style.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_bidi.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_style_gen.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_draw.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_class.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_event.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_group.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_ll.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_group.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_indev.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal_indev.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_refr.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_disp.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_theme.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_theme.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_font.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_font_loader.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_font_fmt_txt.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_font.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_arc.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_btn.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_img.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_fs.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_label.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_font.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_symbol_def.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_txt.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_line.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_table.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_label.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_checkbox.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_bar.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_anim.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_btn.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_slider.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_bar.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_btnmatrix.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_dropdown.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_label.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_roller.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_textarea.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_canvas.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_img.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_img.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_switch.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_api_map.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/lv_extra.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/layouts/lv_layouts.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/layouts/flex/lv_flex.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/layouts/grid/lv_grid.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/lv_libs.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/bmp/lv_bmp.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/fsdrv/lv_fsdrv.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/png/lv_png.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/gif/lv_gif.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/qrcode/lv_qrcode.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/sjpg/lv_sjpg.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/freetype/lv_freetype.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/rlottie/lv_rlottie.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/ffmpeg/lv_ffmpeg.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/lv_others.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/snapshot/lv_snapshot.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/monkey/lv_monkey.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/gridnav/lv_gridnav.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/fragment/lv_fragment.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/imgfont/lv_imgfont.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/msg/lv_msg.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/ime/lv_ime_pinyin.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/themes/lv_themes.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/themes/default/lv_theme_default.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/themes/mono/lv_theme_mono.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/themes/basic/lv_theme_basic.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/lv_widgets.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/animimg/lv_animimg.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/calendar/lv_calendar.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_btnmatrix.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/chart/lv_chart.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/keyboard/lv_keyboard.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_btnmatrix.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/list/lv_list.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/layouts/flex/lv_flex.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/menu/lv_menu.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/msgbox/lv_msgbox.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/meter/lv_meter.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/spinbox/lv_spinbox.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/spinner/lv_spinner.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/tabview/lv_tabview.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/tileview/lv_tileview.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/win/lv_win.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/led/lv_led.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/span/lv_span.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/esp-idf/components/esp_lcd/include/esp_lcd_panel_io.h \
+  /home/admin/esp-idf/components/esp_lcd/include/esp_lcd_types.h \
+  /home/admin/esp-idf/components/hal/include/hal/lcd_types.h \
+  /home/admin/esp-idf/components/hal/include/hal/i2c_types.h \
+  /home/admin/esp-idf/components/driver/i2c/include/driver/i2c_types.h \
+  /home/admin/esp-idf/components/esp_lcd/include/esp_lcd_panel_ops.h \
+  /home/admin/esp-idf/components/esp_lcd/include/esp_lcd_panel_vendor.h
+
 esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj: /home/admin/Code/esp32-s3-watch/main/main.c \
   /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdio.h \
   /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/_ansi.h \
@@ -617,7 +970,348 @@ esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj: /home/admin/Code/esp32-s3-wat
   /home/admin/Code/esp32-s3-watch/include/input.h \
   /home/admin/Code/esp32-s3-watch/include/wifi.h \
   /home/admin/Code/esp32-s3-watch/include/bluetooth.h \
-  /home/admin/Code/esp32-s3-watch/main/lvgl_port.h
+  /home/admin/Code/esp32-s3-watch/main/lvgl_port.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_log.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_kconfig.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_types.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_timer.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal_tick.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_math.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_mem.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/string.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/strings.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/string.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_async.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_anim_timeline.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_anim.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_printf.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal_disp.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_style.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_font.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_symbol_def.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_area.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_color.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_assert.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_log.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_mem.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_math.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_types.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_area.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_anim.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_txt.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_printf.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_bidi.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_style_gen.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_txt.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_img_decoder.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_img_buf.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_color.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_area.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_fs.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_types.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_img_cache.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_rect.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/sw/lv_draw_sw_gradient.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_color.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_style.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/sw/lv_draw_sw_dither.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_pos.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_area.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_label.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_bidi.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_img.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_line.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_triangle.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_arc.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_mask.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_math.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_transform.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_layer.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_color.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_area.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_ll.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_timer.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal_indev.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal_tick.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_style.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_types.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_area.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_color.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_assert.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_tree.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_pos.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_scroll.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_anim.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_style.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_bidi.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_style_gen.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_draw.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_class.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_event.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_group.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_ll.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_group.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_indev.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal_indev.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_refr.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_disp.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_theme.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_theme.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_font.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_font_loader.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_font_fmt_txt.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_font.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_arc.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_btn.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_img.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_fs.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_label.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_font.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_symbol_def.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_txt.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_line.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_table.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_label.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_checkbox.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_bar.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_anim.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_btn.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_slider.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_bar.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_btnmatrix.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_dropdown.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_label.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_roller.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_textarea.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_canvas.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_img.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_img.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_switch.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_api_map.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/lv_extra.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/layouts/lv_layouts.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/layouts/flex/lv_flex.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/layouts/grid/lv_grid.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/lv_libs.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/bmp/lv_bmp.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/fsdrv/lv_fsdrv.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/png/lv_png.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/gif/lv_gif.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/qrcode/lv_qrcode.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/sjpg/lv_sjpg.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/freetype/lv_freetype.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/rlottie/lv_rlottie.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/ffmpeg/lv_ffmpeg.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/lv_others.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/snapshot/lv_snapshot.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/monkey/lv_monkey.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/gridnav/lv_gridnav.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/fragment/lv_fragment.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/imgfont/lv_imgfont.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/msg/lv_msg.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/ime/lv_ime_pinyin.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/themes/lv_themes.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/themes/default/lv_theme_default.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/themes/mono/lv_theme_mono.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/themes/basic/lv_theme_basic.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/lv_widgets.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/animimg/lv_animimg.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/calendar/lv_calendar.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_btnmatrix.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/chart/lv_chart.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/keyboard/lv_keyboard.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_btnmatrix.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/list/lv_list.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/layouts/flex/lv_flex.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/menu/lv_menu.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/msgbox/lv_msgbox.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/meter/lv_meter.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/spinbox/lv_spinbox.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/spinner/lv_spinner.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/tabview/lv_tabview.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/tileview/lv_tileview.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/win/lv_win.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/led/lv_led.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/span/lv_span.h \
+  /home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h \
+  /home/admin/Code/esp32-s3-watch/main/touch.h
+
+esp-idf/main/CMakeFiles/__idf_main.dir/touch.c.obj: /home/admin/Code/esp32-s3-watch/main/touch.c \
+  /home/admin/Code/esp32-s3-watch/main/touch.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_err.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdint.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdint.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_default_types.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/features.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/_newlib_version.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_intsup.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_stdint.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdio.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/_ansi.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/newlib.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/config.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/ieeefp.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/cdefs.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stddef.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdarg.h \
+  /home/admin/esp-idf/components/newlib/platform_include/sys/reent.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/reent.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/_ansi.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_types.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_types.h \
+  /home/admin/esp-idf/components/newlib/platform_include/sys/lock.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/lock.h \
+  /home/admin/esp-idf/components/newlib/platform_include/assert.h \
+  config/sdkconfig.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdlib.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/stdlib.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/alloca.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_locale.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/assert.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/stdio.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_compiler.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdbool.h \
+  /home/admin/Code/esp32-s3-watch/include/board_config.h \
+  /home/admin/esp-idf/components/driver/gpio/include/driver/gpio.h \
+  /home/admin/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h \
+  /home/admin/esp-idf/components/esp_hw_support/include/esp_intr_types.h \
+  /home/admin/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+  /home/admin/esp-idf/components/soc/esp32s3/include/soc/mpu_caps.h \
+  /home/admin/esp-idf/components/hal/include/hal/gpio_types.h \
+  /home/admin/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_bit_defs.h \
+  /home/admin/esp-idf/components/esp_rom/include/esp_rom_gpio.h \
+  /home/admin/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h \
+  /home/admin/esp-idf/components/driver/gpio/include/driver/gpio_etm.h \
+  /home/admin/esp-idf/components/esp_hw_support/include/esp_etm.h \
+  /home/admin/esp-idf/components/log/include/esp_log.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/inttypes.h \
+  /home/admin/esp-idf/components/esp_rom/include/esp_rom_sys.h \
+  /home/admin/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h \
+  /home/admin/esp-idf/components/log/include/esp_log_internal.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h \
+  /home/admin/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h \
+  /home/admin/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa_config.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa/hal.h \
+  /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h \
+  /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h \
+  /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h \
+  /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h \
+  /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa_context.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa/corebits.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/projdefs.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/deprecated_definitions.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
+  /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/specreg.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h \
+  /home/admin/esp-idf/components/xtensa/include/xt_instr_macros.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa/xtruntime.h \
+  /home/admin/esp-idf/components/esp_hw_support/include/spinlock.h \
+  /home/admin/esp-idf/components/esp_hw_support/include/esp_cpu.h \
+  /home/admin/esp-idf/components/xtensa/include/xtensa_api.h \
+  /home/admin/esp-idf/components/xtensa/include/xt_utils.h \
+  /home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_attr.h \
+  /home/admin/esp-idf/components/esp_system/include/esp_private/crosscore_int.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_macros.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_assert.h \
+  /home/admin/esp-idf/components/esp_hw_support/include/esp_memory_utils.h \
+  /home/admin/esp-idf/components/soc/esp32s3/include/soc/soc.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_assert.h \
+  /home/admin/esp-idf/components/soc/esp32s3/include/soc/reg_base.h \
+  /home/admin/esp-idf/components/newlib/platform_include/esp_newlib.h \
+  /home/admin/esp-idf/components/heap/include/esp_heap_caps.h \
+  /home/admin/esp-idf/components/heap/include/multi_heap.h \
+  /home/admin/esp-idf/components/esp_system/include/esp_system.h \
+  /home/admin/esp-idf/components/esp_common/include/esp_idf_version.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portbenchmark.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/limits.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/syslimits.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/limits.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/syslimits.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/mpu_wrappers.h \
+  /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/reent.h \
+  /home/admin/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/semphr.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/stream_buffer.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/message_buffer.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/stream_buffer.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/event_groups.h \
+  /home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/timers.h
 
 esp-idf/main/CMakeFiles/__idf_main.dir/watch_face.c.obj: /home/admin/Code/esp32-s3-watch/main/watch_face.c \
   /home/admin/Code/esp32-s3-watch/include/watch_face.h \
@@ -885,358 +1579,606 @@ esp-idf/main/CMakeFiles/__idf_main.dir/wifi.c.obj: /home/admin/Code/esp32-s3-wat
   /home/admin/esp-idf/components/esp_partition/include/esp_partition.h
 
 
+/home/admin/esp-idf/components/esp_netif/include/esp_netif_defaults.h:
+
+/home/admin/esp-idf/components/esp_netif/include/esp_netif_types.h:
+
+/home/admin/esp-idf/components/esp_netif/include/esp_netif.h:
+
+/home/admin/esp-idf/components/esp_wifi/include/esp_wifi_default.h:
+
+/home/admin/esp-idf/components/esp_wifi/include/esp_private/wifi_os_adapter.h:
+
 /home/admin/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h:
+
+/home/admin/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_private.h:
 
 /home/admin/esp-idf/components/esp_event/include/esp_event.h:
 
 /home/admin/esp-idf/components/esp_event/include/esp_event_base.h:
 
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/queue.h:
+/home/admin/esp-idf/components/esp_hw_support/include/esp_interface.h:
 
-/home/admin/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_types_private.h:
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/queue.h:
 
 /home/admin/esp-idf/components/esp_wifi/include/esp_wifi_types.h:
 
 /home/admin/esp-idf/components/esp_wifi/include/esp_wifi.h:
 
-/home/admin/Code/esp32-s3-watch/main/watch_face.c:
-
-/home/admin/Code/esp32-s3-watch/main/lvgl_port.h:
-
-/home/admin/esp-idf/components/nvs_flash/include/nvs.h:
-
-/home/admin/Code/esp32-s3-watch/main/main.c:
-
-/home/admin/esp-idf/components/esp_system/include/esp_ipc.h:
-
-/home/admin/esp-idf/components/driver/spi/include/driver/spi_common.h:
-
-/home/admin/esp-idf/components/hal/include/hal/spi_types.h:
-
-/home/admin/esp-idf/components/driver/spi/include/driver/spi_master.h:
-
-/home/admin/esp-idf/components/esp_lcd/include/esp_lcd_panel_vendor.h:
-
-/home/admin/esp-idf/components/esp_lcd/include/esp_lcd_panel_ops.h:
-
 /home/admin/Code/esp32-s3-watch/main/wifi.c:
-
-/home/admin/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h:
-
-/home/admin/esp-idf/components/esp_hw_support/include/esp_interface.h:
-
-/home/admin/esp-idf/components/hal/include/hal/lcd_types.h:
-
-/home/admin/esp-idf/components/esp_lcd/include/esp_lcd_types.h:
-
-/home/admin/Code/esp32-s3-watch/main/display.c:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/signal.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/timespec.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_timeval.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/strings.h:
-
-/home/admin/Code/esp32-s3-watch/include/input.h:
-
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/semphr.h:
-
-/home/admin/Code/esp32-s3-watch/main/comfort/breathing.h:
-
-/home/admin/esp-idf/components/driver/gpio/include/driver/gpio.h:
-
-/home/admin/Code/esp32-s3-watch/main/comfort/messages.c:
-
-/home/admin/esp-idf/components/esp_netif/include/esp_netif_defaults.h:
-
-/home/admin/esp-idf/components/esp_hw_support/include/esp_etm.h:
-
-/home/admin/esp-idf/components/esp_system/include/esp_private/crosscore_int.h:
-
-/home/admin/esp-idf/components/driver/gpio/include/driver/gpio_etm.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_time.h:
-
-/home/admin/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h:
-
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:
-
-/home/admin/esp-idf/components/esp_partition/include/esp_partition.h:
-
-/home/admin/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:
-
-/home/admin/esp-idf/components/hal/include/hal/gpio_types.h:
-
-/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h:
-
-/home/admin/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/time.h:
-
-/home/admin/esp-idf/components/esp_hw_support/include/esp_intr_types.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/syslimits.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdbool.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/limits.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stddef.h:
-
-/home/admin/esp-idf/components/xtensa/include/xt_instr_macros.h:
-
-/home/admin/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/assert.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/inttypes.h:
-
-/home/admin/Code/esp32-s3-watch/include/board_config.h:
-
-/home/admin/esp-idf/components/soc/esp32s3/include/soc/reg_base.h:
-
-/home/admin/esp-idf/components/esp_wifi/include/esp_wifi_default.h:
-
-/home/admin/Code/esp32-s3-watch/include/watch_face.h:
-
-/home/admin/esp-idf/components/esp_rom/include/esp_rom_sys.h:
-
-/home/admin/esp-idf/components/esp_rom/include/esp_rom_gpio.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/signal.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_locale.h:
-
-/home/admin/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/ieeefp.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/newlib.h:
-
-/home/admin/esp-idf/components/log/include/esp_log_internal.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_default_types.h:
-
-/home/admin/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h:
-
-/home/admin/esp-idf/components/newlib/platform_include/time.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_stdint.h:
-
-/home/admin/Code/esp32-s3-watch/include/wifi.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdio.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_intsup.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_timespec.h:
-
-/home/admin/Code/esp32-s3-watch/main/bluetooth.c:
-
-/home/admin/esp-idf/components/newlib/platform_include/sys/lock.h:
-
-/home/admin/esp-idf/components/esp_system/include/esp_system.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_sigset.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/features.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdint.h:
-
-/home/admin/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h:
-
-/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h:
-
-/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/specreg.h:
-
-/home/admin/esp-idf/components/esp_common/include/esp_bit_defs.h:
-
-/home/admin/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_types.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/config.h:
-
-/home/admin/esp-idf/components/esp_common/include/esp_compiler.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/alloca.h:
-
-/home/admin/esp-idf/components/xtensa/include/xtensa_api.h:
-
-/home/admin/esp-idf/components/driver/i2c/include/driver/i2c_types.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/_ansi.h:
-
-/home/admin/esp-idf/components/xtensa/include/xtensa/xtruntime.h:
-
-/home/admin/Code/esp32-s3-watch/main/comfort/breathing.c:
-
-/home/admin/esp-idf/components/log/include/esp_log.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/cdefs.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/lock.h:
-
-/home/admin/Code/esp32-s3-watch/include/display.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdint.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdarg.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/string.h:
-
-/home/admin/esp-idf/components/newlib/platform_include/assert.h:
-
-/home/admin/esp-idf/components/esp_hw_support/include/spinlock.h:
-
-/home/admin/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_private.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/reent.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/types.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_pthreadtypes.h:
-
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/mpu_wrappers.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/_newlib_version.h:
-
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/stream_buffer.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/stdio.h:
-
-/home/admin/Code/esp32-s3-watch/main/comfort/emergency.c:
-
-/home/admin/esp-idf/components/soc/esp32s3/include/soc/mpu_caps.h:
-
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/event_groups.h:
-
-/home/admin/esp-idf/components/esp_wifi/include/esp_private/wifi_os_adapter.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/stdlib.h:
-
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/types.h:
-
-/home/admin/esp-idf/components/newlib/platform_include/sys/reent.h:
-
-/home/admin/esp-idf/components/esp_netif/include/esp_netif.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_types.h:
 
 /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/time.h:
 
-/home/admin/esp-idf/components/xtensa/include/xtensa/corebits.h:
+/home/admin/Code/esp32-s3-watch/main/watch_face.c:
 
-/home/admin/esp-idf/components/heap/include/multi_heap.h:
+/home/admin/Code/esp32-s3-watch/main/touch.c:
 
-/home/admin/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h:
+/home/admin/Code/esp32-s3-watch/main/touch.h:
 
-/home/admin/esp-idf/components/xtensa/include/xtensa_context.h:
+/home/admin/Code/esp32-s3-watch/include/wifi.h:
 
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:
+/home/admin/Code/esp32-s3-watch/include/watch_face.h:
 
-/home/admin/esp-idf/components/xtensa/include/xtensa_config.h:
+/home/admin/esp-idf/components/esp_partition/include/esp_partition.h:
 
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/string.h:
-
-/home/admin/esp-idf/components/xtensa/include/xtensa/hal.h:
-
-/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:
-
-/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h:
-
-/home/admin/Code/esp32-s3-watch/include/bluetooth.h:
-
-/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h:
-
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/projdefs.h:
-
-/home/admin/esp-idf/components/newlib/platform_include/sys/time.h:
-
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/deprecated_definitions.h:
-
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:
-
-/home/admin/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h:
-
-/home/admin/esp-idf/components/esp_hw_support/include/esp_cpu.h:
-
-/home/admin/esp-idf/components/xtensa/include/xt_utils.h:
-
-/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h:
-
-/home/admin/esp-idf/components/esp_common/include/esp_attr.h:
+/home/admin/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/admin/esp-idf/components/nvs_flash/include/nvs_flash.h:
 
-/home/admin/esp-idf/components/esp_common/include/esp_macros.h:
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/span/lv_span.h:
 
-/home/admin/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.h:
 
-/home/admin/esp-idf/components/esp_common/include/esp_assert.h:
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/led/lv_led.h:
 
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/time.h:
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/tileview/lv_tileview.h:
 
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/tabview/lv_tabview.h:
 
-/home/admin/esp-idf/components/soc/esp32s3/include/soc/soc.h:
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/spinner/lv_spinner.h:
 
-/home/admin/esp-idf/components/newlib/platform_include/esp_newlib.h:
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/meter/lv_meter.h:
 
-/home/admin/esp-idf/components/esp_netif/include/esp_netif_types.h:
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/msgbox/lv_msgbox.h:
 
-/home/admin/esp-idf/components/heap/include/esp_heap_caps.h:
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/menu/lv_menu.h:
 
-/home/admin/esp-idf/components/esp_common/include/esp_err.h:
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/keyboard/lv_keyboard.h:
 
-/home/admin/esp-idf/components/esp_common/include/esp_idf_version.h:
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.h:
 
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portbenchmark.h:
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.h:
 
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/limits.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/syslimits.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/math.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdlib.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/reent.h:
-
-/home/admin/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:
-
-/home/admin/esp-idf/components/hal/include/hal/i2c_types.h:
-
-config/sdkconfig.h:
-
-/home/admin/esp-idf/components/newlib/platform_include/sys/select.h:
-
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/message_buffer.h:
-
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:
-
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/sched.h:
-
-/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/timers.h:
-
-/home/admin/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h:
-
-/home/admin/esp-idf/components/esp_timer/include/esp_timer.h:
-
-/home/admin/esp-idf/components/esp_lcd/include/esp_lcd_panel_io.h:
-
-/home/admin/Code/esp32-s3-watch/main/comfort/emergency.h:
-
-/home/admin/Code/esp32-s3-watch/main/input.c:
-
-/home/admin/Code/esp32-s3-watch/main/comfort/messages.h:
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/select.h:
 
 /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/endian.h:
 
+/home/admin/Code/esp32-s3-watch/main/comfort/messages.h:
+
+/home/admin/Code/esp32-s3-watch/main/input.c:
+
+/home/admin/Code/esp32-s3-watch/main/comfort/emergency.h:
+
+/home/admin/esp-idf/components/esp_lcd/include/esp_lcd_panel_io.h:
+
+/home/admin/esp-idf/components/esp_timer/include/esp_timer.h:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/timers.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_draw.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/snapshot/lv_snapshot.h:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:
+
+config/sdkconfig.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_assert.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/calendar/lv_calendar.h:
+
+/home/admin/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/reent.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/syslimits.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/limits.h:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portbenchmark.h:
+
+/home/admin/esp-idf/components/esp_common/include/esp_idf_version.h:
+
+/home/admin/esp-idf/components/esp_common/include/esp_err.h:
+
+/home/admin/esp-idf/components/heap/include/esp_heap_caps.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_style.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/time.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/ime/lv_ime_pinyin.h:
+
+/home/admin/esp-idf/components/esp_common/include/esp_assert.h:
+
+/home/admin/esp-idf/components/esp_common/include/esp_macros.h:
+
+/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/extreg.h:
+
+/home/admin/esp-idf/components/xtensa/include/xt_utils.h:
+
+/home/admin/esp-idf/components/esp_hw_support/include/esp_cpu.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal_tick.h:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_table.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/imgfont/lv_imgfont.h:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/deprecated_definitions.h:
+
+/home/admin/esp-idf/components/newlib/platform_include/sys/select.h:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/projdefs.h:
+
+/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-matmap.h:
+
+/home/admin/Code/esp32-s3-watch/include/bluetooth.h:
+
+/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/string.h:
+
+/home/admin/esp-idf/components/xtensa/include/xtensa_context.h:
+
+/home/admin/esp-idf/components/heap/include/multi_heap.h:
+
+/home/admin/esp-idf/components/xtensa/include/xtensa/hal.h:
+
+/home/admin/esp-idf/components/xtensa/include/xtensa/corebits.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_printf.h:
+
+/home/admin/esp-idf/components/newlib/platform_include/sys/reent.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/types.h:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/queue.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_color.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/themes/mono/lv_theme_mono.h:
+
+/home/admin/Code/esp32-s3-watch/main/comfort/emergency.c:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/stream_buffer.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_slider.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/_newlib_version.h:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/mpu_wrappers.h:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/message_buffer.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_pthreadtypes.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/reent.h:
+
+/home/admin/esp-idf/components/esp_hw_support/include/spinlock.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/fragment/lv_fragment.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/string.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdarg.h:
+
+/home/admin/Code/esp32-s3-watch/main/main.c:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/event_groups.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdint.h:
+
+/home/admin/Code/esp32-s3-watch/include/display.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/lock.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/cdefs.h:
+
+/home/admin/esp-idf/components/log/include/esp_log.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/bmp/lv_bmp.h:
+
+/home/admin/esp-idf/components/xtensa/include/xtensa/xtruntime.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/_ansi.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_font_fmt_txt.h:
+
+/home/admin/esp-idf/components/driver/i2c/include/driver/i2c_types.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_checkbox.h:
+
+/home/admin/esp-idf/components/xtensa/include/xtensa_api.h:
+
+/home/admin/esp-idf/components/soc/esp32s3/include/soc/mpu_caps.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/alloca.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/config.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_indev.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_types.h:
+
+/home/admin/esp-idf/components/soc/esp32s3/include/soc/gpio_num.h:
+
+/home/admin/esp-idf/components/esp_common/include/esp_bit_defs.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_label.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/types.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_symbol_def.h:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:
+
+/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/system.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_switch.h:
+
+/home/admin/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdint.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/features.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_sigset.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/animimg/lv_animimg.h:
+
+/home/admin/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_types_private.h:
+
+/home/admin/esp-idf/components/newlib/platform_include/sys/lock.h:
+
+/home/admin/Code/esp32-s3-watch/main/bluetooth.c:
+
+/home/admin/esp-idf/components/soc/esp32s3/include/soc/soc.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_timespec.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/list/lv_list.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_intsup.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdio.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_stdint.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/math.h:
+
+/home/admin/esp-idf/components/newlib/platform_include/time.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_img.h:
+
+/home/admin/esp-idf/components/soc/esp32s3/include/soc/reset_reasons.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/rlottie/lv_rlottie.h:
+
+/home/admin/esp-idf/components/log/include/esp_log_internal.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_transform.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/themes/default/lv_theme_default.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_locale.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/signal.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/stdio.h:
+
+/home/admin/esp-idf/components/esp_rom/include/esp_rom_gpio.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_style_gen.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_mask.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_img_buf.h:
+
+/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_theme.h:
+
+/home/admin/esp-idf/components/soc/esp32s3/include/soc/reg_base.h:
+
+/home/admin/Code/esp32-s3-watch/include/board_config.h:
+
+/home/admin/Code/esp32-s3-watch/main/comfort/breathing.c:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/inttypes.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/assert.h:
+
+/home/admin/esp-idf/components/freertos/config/xtensa/include/freertos/FreeRTOSConfig_arch.h:
+
+/home/admin/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h:
+
+/home/admin/esp-idf/components/xtensa/include/xt_instr_macros.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/msg/lv_msg.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stddef.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/limits.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/stdlib.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/stdbool.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_types.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/13.2.0/include/syslimits.h:
+
+/home/admin/esp-idf/components/esp_hw_support/include/esp_intr_types.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/newlib.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_log.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_ll.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/fsdrv/lv_fsdrv.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/qrcode/lv_qrcode.h:
+
+/home/admin/esp-idf/components/hal/include/hal/gpio_types.h:
+
+/home/admin/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/sched.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal_disp.h:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:
+
+/home/admin/esp-idf/components/soc/esp32s3/include/soc/gpio_pins.h:
+
+/home/admin/esp-idf/components/driver/gpio/include/driver/gpio_etm.h:
+
+/home/admin/esp-idf/components/esp_system/include/esp_private/crosscore_int.h:
+
+/home/admin/esp-idf/components/esp_hw_support/include/esp_etm.h:
+
+/home/admin/esp-idf/components/driver/gpio/include/driver/gpio.h:
+
+/home/admin/esp-idf/components/esp_system/include/esp_system.h:
+
+/home/admin/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_img.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_label.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/chart/lv_chart.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/gridnav/lv_gridnav.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_style_gen.h:
+
+/home/admin/esp-idf/components/hal/include/hal/i2c_types.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_arc.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_default_types.h:
+
+/home/admin/Code/esp32-s3-watch/include/input.h:
+
 /home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_endian.h:
 
-/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/select.h:
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/strings.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/_timeval.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/sys/timespec.h:
+
+/home/admin/Code/esp32-s3-watch/main/comfort/breathing.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_canvas.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/signal.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/spinbox/lv_spinbox.h:
+
+/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/specreg.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_class.h:
+
+/home/admin/Code/esp32-s3-watch/main/display.c:
+
+/home/admin/esp-idf/components/esp_common/include/esp_compiler.h:
+
+/home/admin/esp-idf/components/esp_lcd/include/esp_lcd_types.h:
+
+/home/admin/esp-idf/components/hal/include/hal/lcd_types.h:
+
+/home/admin/esp-idf/components/soc/esp32s3/include/soc/clk_tree_defs.h:
+
+/home/admin/esp-idf/components/esp_common/include/esp_attr.h:
+
+/home/admin/esp-idf/components/esp_lcd/include/esp_lcd_panel_ops.h:
+
+/home/admin/esp-idf/components/esp_lcd/include/esp_lcd_panel_vendor.h:
+
+/home/admin/esp-idf/components/esp_hw_support/include/esp_intr_alloc.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/time.h:
+
+/home/admin/esp-idf/components/driver/spi/include/driver/spi_master.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_font.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/win/lv_win.h:
+
+/home/admin/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h:
+
+/home/admin/esp-idf/components/hal/include/hal/spi_types.h:
+
+/home/admin/esp-idf/components/driver/spi/include/driver/spi_common.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_triangle.h:
+
+/home/admin/esp-idf/components/esp_system/include/esp_ipc.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/font/lv_font_loader.h:
+
+/home/admin/Code/esp32-s3-watch/main/lvgl_port.c:
+
+/home/admin/Code/esp32-s3-watch/main/lvgl_port.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_img_decoder.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/lvgl.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_types.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_internal.h:
+
+/home/admin/esp-idf/components/esp_rom/include/esp_rom_sys.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_conf_kconfig.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_anim.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_timer.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_mem.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/layouts/grid/lv_grid.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_async.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_anim_timeline.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_line.h:
+
+/home/admin/esp-idf/components/freertos/config/include/freertos/FreeRTOSConfig.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/sjpg/lv_sjpg.h:
+
+/home/admin/esp-idf/components/esp_netif/include/esp_netif_ip_addr.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_style.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_area.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/_time.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_txt.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_bidi.h:
+
+/home/admin/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_fs.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_img_cache.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_rect.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_dropdown.h:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/semphr.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/sw/lv_draw_sw_gradient.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_tree.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/machine/ieeefp.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/sw/lv_draw_sw_dither.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_event.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_pos.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/themes/basic/lv_theme_basic.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_refr.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_arc.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_layer.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/hal/lv_hal_indev.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/png/lv_png.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_obj_scroll.h:
+
+/home/admin/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/xtensa-esp-elf/sys-include/stdlib.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/monkey/lv_monkey.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_group.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/misc/lv_math.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/lv_widgets.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/core/lv_disp.h:
+
+/home/admin/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_btn.h:
+
+/home/admin/esp-idf/components/xtensa/include/xtensa_config.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_bar.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_btnmatrix.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/ffmpeg/lv_ffmpeg.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_roller.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/widgets/lv_textarea.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/lv_api_map.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/lv_extra.h:
+
+/home/admin/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/layouts/lv_layouts.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/layouts/flex/lv_flex.h:
+
+/home/admin/esp-idf/components/newlib/platform_include/esp_newlib.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/lv_libs.h:
+
+/home/admin/Code/esp32-s3-watch/main/comfort/messages.c:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/gif/lv_gif.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/lvgl.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/libs/freetype/lv_freetype.h:
+
+/home/admin/esp-idf/components/newlib/platform_include/sys/time.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/others/lv_others.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/draw/lv_draw_line.h:
+
+/home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/themes/lv_themes.h:
