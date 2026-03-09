@@ -21,6 +21,9 @@
 
 #include "lvgl.h"
 
+// Forward declarations
+static void create_test_menu(void);
+
 static const char *TAG = "HW_TEST";
 
 // Test screen state
@@ -56,7 +59,7 @@ static void test_flash(void);
 // Test items list
 static test_item_t test_items[] = {
     {"Display Test", LV_SYMBOL_EYE_OPEN, test_display, false, false},
-    {"Touch Test", LV_SYMBOL_HAND, test_touch, false, false},
+    {"Touch Test", LV_SYMBOL_EDIT, test_touch, false, false},
     {"Audio Test", LV_SYMBOL_AUDIO, test_audio, false, false},
     {"IMU Test", LV_SYMBOL_GPS, test_imu, false, false},
     {"Battery Test", LV_SYMBOL_BATTERY_FULL, test_battery, false, false},
@@ -114,7 +117,6 @@ static void run_all_tests(void)
 static void test_item_event_cb(lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
-    lv_obj_t *btn = lv_event_get_target(e);
     int32_t idx = (int32_t)(intptr_t)lv_event_get_user_data(e);
     
     if (code == LV_EVENT_CLICKED) {
@@ -171,7 +173,7 @@ static void create_test_menu(void)
     // Title
     lv_obj_t *title = lv_label_create(test_state.screen);
     lv_label_set_text(title, "Hardware Test");
-    lv_obj_set_style_text_font(title, &lv_font_montserrat_20, 0);
+    lv_obj_set_style_text_font(title, &lv_font_montserrat_14, 0);
     lv_obj_set_style_text_color(title, lv_color_hex(0x00ffff), 0);
     
     // Subtitle
@@ -214,7 +216,7 @@ static void create_test_menu(void)
     test_state.result_label = lv_label_create(test_state.screen);
     lv_label_set_text(test_state.result_label, "Ready");
     lv_obj_set_style_text_color(test_state.result_label, lv_color_hex(0x00ff00), 0);
-    lv_obj_set_style_text_font(test_state.result_label, &lv_font_montserrat_16, 0);
+    lv_obj_set_style_text_font(test_state.result_label, &lv_font_montserrat_14, 0);
     
     // Run all button
     lv_obj_t *run_all_btn = lv_btn_create(test_state.screen);
@@ -439,7 +441,7 @@ static void test_battery(void)
         return;
     }
     
-    ret = adc1_config_channel_atten(channel, ADC_ATTEN_DB_11);
+    ret = adc1_config_channel_atten(channel, ADC_ATTEN_DB_12);
     if (ret != ESP_OK) {
         ESP_LOGE(TAG, "ADC channel config failed: 0x%x", ret);
         test_items[4].passed = false;
@@ -470,23 +472,23 @@ static void test_battery(void)
     // Assuming battery voltage divider (e.g., 2:1 ratio)
     float battery_voltage = voltage * 2.0;
     
-    ESP_LOGI(TAG, "ADC: %d, Voltage: %.2fV, Battery: %.2fV", adc_avg, voltage, battery_voltage);
+    ESP_LOGI(TAG, "ADC: %lu, Voltage: %.2fV, Battery: %.2fV", (unsigned long)adc_avg, voltage, battery_voltage);
     
     if (test_state.result_label) {
-        lv_label_set_text_fmt(test_state.result_label, "✓ Battery: %.2fV (ADC: %d)", battery_voltage, adc_avg);
+        lv_label_set_text_fmt(test_state.result_label, "✓ Battery: %.2fV (ADC: %lu)", battery_voltage, (unsigned long)adc_avg);
     }
     
     // Simple battery level estimation
     if (battery_voltage > 4.1) {
-        ESP_LOGI(TAG, "Battery level: 100%");
+        ESP_LOGI(TAG, "Battery level: FULL");
     } else if (battery_voltage > 3.9) {
-        ESP_LOGI(TAG, "Battery level: 75%");
+        ESP_LOGI(TAG, "Battery level: HIGH");
     } else if (battery_voltage > 3.7) {
-        ESP_LOGI(TAG, "Battery level: 50%");
+        ESP_LOGI(TAG, "Battery level: MEDIUM");
     } else if (battery_voltage > 3.5) {
-        ESP_LOGI(TAG, "Battery level: 25%");
+        ESP_LOGI(TAG, "Battery level: LOW");
     } else {
-        ESP_LOGW(TAG, "Battery level: LOW - Charge soon!");
+        ESP_LOGW(TAG, "Battery level: CRITICAL - Charge soon!");
     }
     
     test_items[4].passed = true;

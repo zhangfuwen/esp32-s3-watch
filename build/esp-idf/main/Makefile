@@ -295,6 +295,30 @@ display.c.s:
 	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/display.c.s
 .PHONY : display.c.s
 
+hw_test.obj: hw_test.c.obj
+.PHONY : hw_test.obj
+
+# target to build an object file
+hw_test.c.obj:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/hw_test.c.obj
+.PHONY : hw_test.c.obj
+
+hw_test.i: hw_test.c.i
+.PHONY : hw_test.i
+
+# target to preprocess a source file
+hw_test.c.i:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/hw_test.c.i
+.PHONY : hw_test.c.i
+
+hw_test.s: hw_test.c.s
+.PHONY : hw_test.s
+
+# target to generate assembly for a file
+hw_test.c.s:
+	cd /home/admin/Code/esp32-s3-watch/build && $(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/hw_test.c.s
+.PHONY : hw_test.c.s
+
 input.obj: input.c.obj
 .PHONY : input.obj
 
@@ -467,6 +491,9 @@ help:
 	@echo "... display.obj"
 	@echo "... display.i"
 	@echo "... display.s"
+	@echo "... hw_test.obj"
+	@echo "... hw_test.i"
+	@echo "... hw_test.s"
 	@echo "... input.obj"
 	@echo "... input.i"
 	@echo "... input.s"

@@ -346,4 +346,5 @@ esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj: \
  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/imgbtn/../../../lvgl.h \
  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/span/lv_span.h \
  /home/admin/Code/esp32-s3-watch/components/lvgl/src/extra/widgets/span/../../../lvgl.h \
- /home/admin/Code/esp32-s3-watch/main/touch.h
+ /home/admin/Code/esp32-s3-watch/main/touch.h \
+ /home/admin/Code/esp32-s3-watch/main/hw_test.h

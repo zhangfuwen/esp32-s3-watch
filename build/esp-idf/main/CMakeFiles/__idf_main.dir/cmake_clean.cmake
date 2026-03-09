@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/__idf_main.dir/comfort/messages.c.obj.d"
   "CMakeFiles/__idf_main.dir/display.c.obj"
   "CMakeFiles/__idf_main.dir/display.c.obj.d"
+  "CMakeFiles/__idf_main.dir/hw_test.c.obj"
+  "CMakeFiles/__idf_main.dir/hw_test.c.obj.d"
   "CMakeFiles/__idf_main.dir/input.c.obj"
   "CMakeFiles/__idf_main.dir/input.c.obj.d"
   "CMakeFiles/__idf_main.dir/lvgl_port.c.obj"

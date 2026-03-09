@@ -56,7 +56,7 @@ static void touch_handler(touch_event_t event, uint8_t count)
     }
 }
 
-// Start LVGL UI
+// Start LVGL UI - Hardware Test Interface
 static void start_lvgl_ui(void)
 {
     ESP_LOGI(TAG, "=== LVGL UI Start ===");
@@ -79,14 +79,10 @@ static void start_lvgl_ui(void)
         lvgl_start_tasks();
         ESP_LOGI(TAG, "✓ LVGL tasks started!");
         
-        // Create UI elements
-        ESP_LOGI(TAG, "Creating LVGL label...");
-        lv_obj_t *label = lv_label_create(lv_scr_act());
-        lv_label_set_text(label, "ESP32-S3 Watch\nLVGL v0.3.1\nDouble tap to toggle!");
-        lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
-        lv_label_set_long_mode(label, LV_LABEL_LONG_WRAP);
-        lv_obj_set_width(label, DISPLAY_WIDTH - 20);
-        ESP_LOGI(TAG, "✓ LVGL label created!");
+        // Initialize Hardware Test UI
+        ESP_LOGI(TAG, "Starting hardware test UI...");
+        hw_test_init();
+        ESP_LOGI(TAG, "✓ Hardware Test UI ready!");
         
         lvgl_visible = true;
         ESP_LOGI(TAG, "=== LVGL UI Ready ===");

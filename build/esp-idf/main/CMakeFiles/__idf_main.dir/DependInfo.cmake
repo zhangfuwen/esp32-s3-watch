@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/admin/Code/esp32-s3-watch/main/comfort/emergency.c" "esp-idf/main/CMakeFiles/__idf_main.dir/comfort/emergency.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/comfort/emergency.c.obj.d"
   "/home/admin/Code/esp32-s3-watch/main/comfort/messages.c" "esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/comfort/messages.c.obj.d"
   "/home/admin/Code/esp32-s3-watch/main/display.c" "esp-idf/main/CMakeFiles/__idf_main.dir/display.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/display.c.obj.d"
+  "/home/admin/Code/esp32-s3-watch/main/hw_test.c" "esp-idf/main/CMakeFiles/__idf_main.dir/hw_test.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/hw_test.c.obj.d"
   "/home/admin/Code/esp32-s3-watch/main/input.c" "esp-idf/main/CMakeFiles/__idf_main.dir/input.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/input.c.obj.d"
   "/home/admin/Code/esp32-s3-watch/main/lvgl_port.c" "esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port.c.obj.d"
   "/home/admin/Code/esp32-s3-watch/main/main.c" "esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj" "gcc" "esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj.d"
