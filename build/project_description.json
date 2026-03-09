@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "esp32_s3_watch",
-    "project_version":    "v0.5.0-2-ga5a1e78-dirty",
+    "project_version":    "v0.5.0-3-g0af5ad6-dirty",
     "project_path":       "/home/admin/Code/esp32-s3-watch",
     "idf_path":           "/home/admin/esp-idf",
     "build_dir":          "/home/admin/Code/esp32-s3-watch/build",
