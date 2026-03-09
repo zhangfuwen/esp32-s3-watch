@@ -9,6 +9,7 @@ idf_component_register(
         "bluetooth.c"
         "lvgl_port.c"
         "touch.c"
+        "touch_cst816.c"
         "hw_test.c"
         # Emotional Comfort Features
         "comfort/breathing.c"

@@ -22,6 +22,7 @@
 #include "esp_lcd_panel_vendor.h"
 #include "esp_lcd_types.h"
 #include "touch.h"
+#include "touch_cst816.h"
 
 static const char *TAG = "LVGL_PORT";
 
@@ -248,13 +249,74 @@ static void lvgl_indev_read_cb(lv_indev_drv_t *drv, lv_indev_data_t *data)
     last_pressed = pressed;
 }
 
+// CST816 touch state for LVGL
+static touch_point_t cst816_point = {0};
+static bool cst816_available = false;
+
+// Read callback for LVGL input device (CST816)
+static void lvgl_indev_read_cb(lv_indev_drv_t *drv, lv_indev_data_t *data)
+{
+    if (cst816_available && cst816_point.pressed) {
+        data->state = LV_INDEV_STATE_PRESSED;
+        data->point.x = cst816_point.x;
+        data->point.y = cst816_point.y;
+        ESP_LOGV(TAG, "LVGL touch: (%d, %d)", cst816_point.x, cst816_point.y);
+    } else {
+        data->state = LV_INDEV_STATE_RELEASED;
+        // Keep last position for drag detection
+    }
+}
+
+// CST816 touch callback
+static void cst816_callback(touch_event_t event, uint16_t x, uint16_t y)
+{
+    switch (event) {
+        case TOUCH_EVENT_PRESS:
+            cst816_point.x = x;
+            cst816_point.y = y;
+            cst816_point.pressed = true;
+            ESP_LOGI(TAG, "CST816 Press: (%d, %d)", x, y);
+            break;
+            
+        case TOUCH_EVENT_RELEASE:
+            cst816_point.pressed = false;
+            ESP_LOGI(TAG, "CST816 Release");
+            break;
+            
+        case TOUCH_EVENT_MOVE:
+            cst816_point.x = x;
+            cst816_point.y = y;
+            ESP_LOGV(TAG, "CST816 Move: (%d, %d)", x, y);
+            break;
+            
+        default:
+            break;
+    }
+}
+
 // Initialize touch for LVGL
 esp_err_t lvgl_touch_init(void)
 {
     ESP_LOGI(TAG, "LVGL Touch Init...");
     
-    // Initialize touch driver
-    touch_init();
+    // Try to initialize CST816 capacitive touch
+    ESP_LOGI(TAG, "Initializing CST816...");
+    esp_err_t ret = cst816_init();
+    
+    if (ret == ESP_OK) {
+        ESP_LOGI(TAG, "CST816 initialized successfully");
+        cst816_available = true;
+        
+        // Start CST816 task
+        cst816_start_task(cst816_callback);
+    } else {
+        ESP_LOGW(TAG, "CST816 not available, fallback to button touch");
+        cst816_available = false;
+        
+        // Fallback to BOOT button
+        touch_init();
+        touch_start_task(NULL);
+    }
     
     // Register input device with LVGL
     static lv_indev_drv_t indev_drv;

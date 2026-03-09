@@ -36,9 +36,16 @@
 //==================== Buttons & Input ====================
 #define BUILTIN_LED_GPIO            GPIO_NUM_NC       // Not connected
 #define BOOT_BUTTON_GPIO            GPIO_NUM_0        // Boot button
-#define POWER_BUTTON_GPIO           GPIO_NUM_35       // Power button (changed from 45)
+#define POWER_BUTTON_GPIO           GPIO_NUM_35       // Power button
 #define VOLUME_UP_BUTTON_GPIO       GPIO_NUM_NC       // Not connected
 #define VOLUME_DOWN_BUTTON_GPIO     GPIO_NUM_NC       // Not connected
+
+//==================== Touch Panel (CST816) ====================
+#define TOUCH_I2C_SDA_PIN           GPIO_NUM_1        // Shared I2C SDA
+#define TOUCH_I2C_SCL_PIN           GPIO_NUM_2        // Shared I2C SCL
+#define TOUCH_RST_PIN               GPIO_NUM_7        // TP_RST
+#define TOUCH_INT_PIN               GPIO_NUM_46       // TP_INT
+#define TOUCH_I2C_ADDR              (0x15)            // CST816 default address
 
 //==================== Display Configuration ====================
 // Display uses I2C shared with audio codec
