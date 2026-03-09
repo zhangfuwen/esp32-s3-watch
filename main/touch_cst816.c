@@ -74,6 +74,34 @@ esp_err_t cst816_init(void)
     };
     gpio_config(&int_conf);
     
+    // Configure I2C (shared with audio and IMU)
+    i2c_config_t i2c_conf = {
+        .mode = I2C_MODE_MASTER,
+        .sda_io_num = TOUCH_I2C_SDA_PIN,
+        .scl_io_num = TOUCH_I2C_SCL_PIN,
+        .sda_pullup_en = GPIO_PULLUP_ENABLE,
+        .scl_pullup_en = GPIO_PULLUP_ENABLE,
+        .master.clk_speed = TOUCH_I2C_FREQ_HZ,
+    };
+    
+    ESP_LOGI(TAG, "Installing I2C driver...");
+    esp_err_t ret = i2c_param_config(TOUCH_I2C_NUM, &i2c_conf);
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "I2C param config failed: 0x%x", ret);
+        return ret;
+    }
+    
+    // Try to install I2C driver (may already be installed by other drivers)
+    ret = i2c_driver_install(TOUCH_I2C_NUM, I2C_MODE_MASTER, 0, 0, ESP_INTR_FLAG_IRAM);
+    if (ret == ESP_ERR_INVALID_STATE) {
+        ESP_LOGW(TAG, "I2C driver already installed, continuing...");
+    } else if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "I2C driver install failed: 0x%x", ret);
+        return ret;
+    } else {
+        ESP_LOGI(TAG, "I2C driver installed");
+    }
+    
     // Reset CST816
     ESP_LOGI(TAG, "Resetting CST816...");
     gpio_set_level(TOUCH_RST_PIN, 0);
@@ -85,7 +113,7 @@ esp_err_t cst816_init(void)
     
     // Try to read chip ID (CST816 uses register 0xA7 for chip ID)
     uint8_t chip_id[2];
-    esp_err_t ret = cst816_read_reg(0xA7, chip_id, 2);
+    ret = cst816_read_reg(0xA7, chip_id, 2);
     if (ret == ESP_OK) {
         ESP_LOGI(TAG, "CST816 Chip ID: 0x%02x%02x", chip_id[0], chip_id[1]);
         touch_handle.chip_id = (chip_id[0] << 8) | chip_id[1];
