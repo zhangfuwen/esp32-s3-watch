@@ -609,6 +609,12 @@ void hw_test_init(void)
     ESP_LOGI(TAG, "Initializing hardware test UI...");
     
     create_test_menu();
+    
+    // Load the test screen
+    if (test_state.screen) {
+        lv_scr_load(test_state.screen);
+        ESP_LOGI(TAG, "Hardware test screen loaded");
+    }
 }
 
 // Get hardware test screen
