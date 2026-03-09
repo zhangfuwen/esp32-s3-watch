@@ -55,10 +55,10 @@ esp_err_t cst816_init(void);
 
 /**
  * @brief Read touch coordinates
- * @param point Pointer to touch point structure
+ * @param point Pointer to CST816 point structure
  * @return ESP_OK on success
  */
-esp_err_t cst816_read_touch(touch_point_t *point);
+esp_err_t cst816_read_touch(cst816_point_t *point);
 
 /**
  * @brief Start touch interrupt task
@@ -68,10 +68,10 @@ esp_err_t cst816_read_touch(touch_point_t *point);
 esp_err_t cst816_start_task(cst816_callback_t callback);
 
 /**
- * @brief Get touch panel handle
- * @return Pointer to touch panel handle
+ * @brief Get CST816 handle
+ * @return Pointer to CST816 handle
  */
-touch_panel_handle_t* cst816_get_handle(void);
+cst816_handle_t* cst816_get_handle(void);
 
 #ifdef __cplusplus
 }
