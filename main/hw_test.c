@@ -491,7 +491,17 @@ static void test_battery(void)
         ESP_LOGW(TAG, "Battery level: CRITICAL - Charge soon!");
     }
     
+    // Fixed 2026-03-10 v0.5.10: Always mark test as passed and ensure UI updates
     test_items[4].passed = true;
+    test_items[4].tested = true;
+    
+    // Update UI and process events to prevent freeze
+    if (test_state.result_label) {
+        lv_obj_invalidate(test_state.result_label);
+    }
+    lv_task_handler();
+    vTaskDelay(pdMS_TO_TICKS(100));  // Allow UI to refresh
+    
     ESP_LOGI(TAG, "Battery test complete");
 }
 

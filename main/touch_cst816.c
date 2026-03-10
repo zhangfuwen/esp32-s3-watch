@@ -117,6 +117,20 @@ esp_err_t cst816_init(void)
     if (ret == ESP_OK) {
         ESP_LOGI(TAG, "CST816 Chip ID: 0x%02x%02x", chip_id[0], chip_id[1]);
         touch_handle.chip_id = (chip_id[0] << 8) | chip_id[1];
+        
+        // Read firmware version (register 0xA9)
+        uint8_t fw_version[4];
+        if (cst816_read_reg(0xA9, fw_version, 4) == ESP_OK) {
+            ESP_LOGI(TAG, "CST816 Firmware: v%d.%d (build %02x%02x)", 
+                     fw_version[0], fw_version[1], fw_version[2], fw_version[3]);
+        }
+        
+        // Read project ID (register 0xB0) - contains panel resolution info
+        uint8_t proj_id[2];
+        if (cst816_read_reg(0xB0, proj_id, 2) == ESP_OK) {
+            ESP_LOGI(TAG, "CST816 Project ID: 0x%02x%02x", proj_id[0], proj_id[1]);
+        }
+        
         touch_handle.initialized = true;
         ESP_LOGI(TAG, "CST816 initialized successfully");
         return ESP_OK;
