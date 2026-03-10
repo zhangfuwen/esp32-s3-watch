@@ -239,11 +239,10 @@ static void lvgl_indev_read_cb(lv_indev_drv_t *drv, lv_indev_data_t *data)
     if (cst816_available && cst816_point.pressed) {
         data->state = LV_INDEV_STATE_PRESSED;
         // Map CST816 coordinates to display coordinates
-        // CST816 reports: 0-239 x, 0-359 y (but our display is 240x285)
-        // Fixed 2026-03-10: Use correct CST816 max value (359, not 360)
-        // Display offset is now 0, so no additional offset needed
-        int16_t mapped_x = cst816_point.x;
-        int16_t mapped_y = (cst816_point.y * DISPLAY_HEIGHT) / 359;  // Changed from 360 to 359
+        // Formula: mapped = (cst816 * DISPLAY_SIZE) / TOUCH_CST816_MAX
+        // Fixed 2026-03-10 v0.5.6: Use configurable TOUCH_CST816_MAX_Y
+        int16_t mapped_x = (cst816_point.x * DISPLAY_WIDTH) / TOUCH_CST816_MAX_X;
+        int16_t mapped_y = (cst816_point.y * DISPLAY_HEIGHT) / TOUCH_CST816_MAX_Y;
         
         // Clamp to display bounds
         if (mapped_x < 0) mapped_x = 0;
@@ -253,8 +252,8 @@ static void lvgl_indev_read_cb(lv_indev_drv_t *drv, lv_indev_data_t *data)
         
         data->point.x = mapped_x;
         data->point.y = mapped_y;
-        ESP_LOGI(TAG, "LVGL touch: (%d, %d) -> (%d, %d)", 
-                 cst816_point.x, cst816_point.y, mapped_x, mapped_y);
+        ESP_LOGI(TAG, "LVGL touch: CST816(%d, %d) -> LVGL(%d, %d) [divisor=%d]", 
+                 cst816_point.x, cst816_point.y, mapped_x, mapped_y, TOUCH_CST816_MAX_Y);
     } else {
         data->state = LV_INDEV_STATE_RELEASED;
     }

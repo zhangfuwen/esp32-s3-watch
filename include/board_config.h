@@ -81,6 +81,17 @@
 #define DISPLAY_OFFSET_X            0
 #define DISPLAY_OFFSET_Y            0  // Changed from 17 - display from top edge
 
+//==================== Touch Panel Parameters ====================
+// CST816 touch panel resolution
+// Most CST816 panels report 0-239 x, 0-359 y (360 values)
+// But some may be configured differently by manufacturer
+#define TOUCH_CST816_MAX_X          240   // CST816 X resolution (0-239 = 240 values)
+#define TOUCH_CST816_MAX_Y          360   // CST816 Y resolution (0-359 = 360 values)
+// If touch doesn't align with display, try adjusting TOUCH_CST816_MAX_Y:
+// - If touch is shifted toward top: try 350, 340, 330...
+// - If touch is shifted toward bottom: try 370, 380...
+// - If CST816 matches display exactly: use 285
+
 //==================== I2C Configuration ====================
 #define I2C_MASTER_NUM              I2C_NUM_0
 #define I2C_MASTER_FREQ_HZ          400000
