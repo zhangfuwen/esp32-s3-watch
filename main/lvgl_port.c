@@ -240,9 +240,10 @@ static void lvgl_indev_read_cb(lv_indev_drv_t *drv, lv_indev_data_t *data)
         data->state = LV_INDEV_STATE_PRESSED;
         // Map CST816 coordinates to display coordinates
         // CST816 reports: 0-239 x, 0-359 y (but our display is 240x285)
-        // Need to scale Y coordinate
+        // Fixed 2026-03-10: Use correct CST816 max value (359, not 360)
+        // Display offset is now 0, so no additional offset needed
         int16_t mapped_x = cst816_point.x;
-        int16_t mapped_y = (cst816_point.y * DISPLAY_HEIGHT) / 360;
+        int16_t mapped_y = (cst816_point.y * DISPLAY_HEIGHT) / 359;  // Changed from 360 to 359
         
         // Clamp to display bounds
         if (mapped_x < 0) mapped_x = 0;

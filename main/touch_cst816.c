@@ -134,8 +134,10 @@ esp_err_t cst816_read_touch(cst816_point_t *point)
         return ESP_ERR_INVALID_STATE;
     }
     
-    uint8_t buffer[5];
-    esp_err_t ret = cst816_read_reg(CST816_REG_GESTURE, buffer, 5);
+    // Fixed 2026-03-10: Buffer must be 6 bytes (was 5, causing buffer[5] out-of-bounds access)
+    // Register layout: [gesture][finger_num][x_high][x_low][y_high][y_low]
+    uint8_t buffer[6];
+    esp_err_t ret = cst816_read_reg(CST816_REG_GESTURE, buffer, 6);
     if (ret != ESP_OK) {
         return ret;
     }
