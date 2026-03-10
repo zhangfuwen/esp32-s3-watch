@@ -77,8 +77,9 @@
 #define DISPLAY_BACKLIGHT_OUTPUT_INVERT false
 
 // Display offset - ST7789 controller defaults to 240x320, need to center 240x285
+// Fixed 2026-03-10: Set Y offset to 0 to display from top (user reported 20+ pixel downward shift)
 #define DISPLAY_OFFSET_X            0
-#define DISPLAY_OFFSET_Y            ((320 - 285) / 2)  // = 17, center vertically
+#define DISPLAY_OFFSET_Y            0  // Changed from 17 - display from top edge
 
 //==================== I2C Configuration ====================
 #define I2C_MASTER_NUM              I2C_NUM_0
