@@ -155,7 +155,8 @@ esp_err_t cst816_read_touch(cst816_point_t *point)
         point->pressed = true;
         point->gesture = gesture;
         
-        ESP_LOGV(TAG, "Touch: x=%d, y=%d, gesture=%d", x, y, gesture);
+        // Fixed 2026-03-10 v0.5.7: Log raw CST816 coordinates for calibration
+        ESP_LOGI(TAG, "CST816 RAW: x=%d, y=%d, gesture=%d (range: 0-239 x, 0-359 y)", x, y, gesture);
     } else {
         point->pressed = false;
         point->x = 0;

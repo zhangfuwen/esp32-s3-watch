@@ -252,8 +252,13 @@ static void lvgl_indev_read_cb(lv_indev_drv_t *drv, lv_indev_data_t *data)
         
         data->point.x = mapped_x;
         data->point.y = mapped_y;
-        ESP_LOGI(TAG, "LVGL touch: CST816(%d, %d) -> LVGL(%d, %d) [divisor=%d]", 
-                 cst816_point.x, cst816_point.y, mapped_x, mapped_y, TOUCH_CST816_MAX_Y);
+        
+#if TOUCH_CALIBRATION_MODE
+        // Verbose logging for calibration
+        ESP_LOGI(TAG, "TOUCH CALIBRATION: CST816(%d,%d) -> LVGL(%d,%d) [formula: %d*%d/%d=%d]", 
+                 cst816_point.x, cst816_point.y, mapped_x, mapped_y,
+                 cst816_point.y, DISPLAY_HEIGHT, TOUCH_CST816_MAX_Y, mapped_y);
+#endif
     } else {
         data->state = LV_INDEV_STATE_RELEASED;
     }
